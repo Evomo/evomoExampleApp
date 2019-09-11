@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xAv-dL-b4E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Complex-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Complex" id="BYZ-38-t0r" customClass="ComplexViewController" customModule="evomoExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="irf-F2-VUe">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPC-Tv-Mgb" userLabel="deviceStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device-Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-BT-fn4" userLabel="DeviceType">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="UxE-ra-ljp"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device-ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axk-ym-tTQ">
+                                                <rect key="frame" x="100" y="0.0" width="209" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvK-vc-RoF">
+                                                <rect key="frame" x="309" y="0.0" width="50" height="30"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="G9O-U1-ssd"/>
+                                                </constraints>
+                                                <state key="normal" title="Scan"/>
+                                                <connections>
+                                                    <segue destination="sls-L5-8gn" kind="show" identifier="ScanDevice" id="T4W-vS-zAn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y0K-c8-w7v" userLabel="ClassificationButtonsStackView">
+                                        <rect key="frame" x="0.0" y="40" width="359" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xix-YS-E1W">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" title="Start Classification"/>
+                                                <connections>
+                                                    <action selector="startClassification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikU-lU-jCQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sdq-cU-Fir">
+                                                <rect key="frame" x="187" y="0.0" width="172" height="30"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" title="Stop Classification"/>
+                                                <connections>
+                                                    <action selector="stopClassification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v6c-jj-30T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sdq-cU-Fir" firstAttribute="leading" secondItem="xix-YS-E1W" secondAttribute="trailing" constant="15" id="PTC-JI-Lj6"/>
+                                            <constraint firstItem="xix-YS-E1W" firstAttribute="width" secondItem="sdq-cU-Fir" secondAttribute="width" id="SlK-Nm-wCi"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-ZV-A7r" userLabel="Classify Sensor Position">
+                                        <rect key="frame" x="0.0" y="80" width="359" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="Classify sensor position while running"/>
+                                        <connections>
+                                            <action selector="classifyPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1N-3S-2Jq"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sp3-iT-UJb">
+                                        <rect key="frame" x="0.0" y="120" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Heart Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avZ-v7-0WJ" userLabel="HR-Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="jpg-nd-1XG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-- BPM" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-yl-oW8" userLabel="HR">
+                                                <rect key="frame" x="100" y="0.0" width="259" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="avZ-v7-0WJ" firstAttribute="leading" secondItem="Sp3-iT-UJb" secondAttribute="leading" id="dsq-3J-j6G"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="200" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTm-U0-0wI">
+                                        <rect key="frame" x="0.0" y="160" width="359" height="427"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iTm-U0-0wI" firstAttribute="width" secondItem="irf-F2-VUe" secondAttribute="width" id="JYd-WH-R7Q"/>
+                                    <constraint firstItem="Sp3-iT-UJb" firstAttribute="width" secondItem="irf-F2-VUe" secondAttribute="width" id="XEv-gb-8Ro"/>
+                                    <constraint firstItem="ID7-ZV-A7r" firstAttribute="width" secondItem="irf-F2-VUe" secondAttribute="width" id="bjF-QQ-o9r"/>
+                                    <constraint firstItem="uPC-Tv-Mgb" firstAttribute="width" secondItem="irf-F2-VUe" secondAttribute="width" id="pV2-5I-1Rn"/>
+                                    <constraint firstItem="Y0K-c8-w7v" firstAttribute="width" secondItem="irf-F2-VUe" secondAttribute="width" id="wBN-z5-765"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irf-F2-VUe" secondAttribute="trailing" constant="8" id="6kT-DT-NSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="irf-F2-VUe" secondAttribute="bottom" constant="8" id="SpR-4d-AXA"/>
+                            <constraint firstItem="irf-F2-VUe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Tv7-U2-VZR"/>
+                            <constraint firstItem="irf-F2-VUe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ylp-Ia-zxO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Complex Modus" id="VgZ-IY-Gww"/>
+                    <connections>
+                        <outlet property="deviceID" destination="axk-ym-tTQ" id="0SS-xm-a9g"/>
+                        <outlet property="deviceType" destination="Wob-BT-fn4" id="Yu1-dL-xJu"/>
+                        <outlet property="heartRateLabel" destination="xe4-yl-oW8" id="ojl-b0-o5c"/>
+                        <outlet property="movementsLabel" destination="iTm-U0-0wI" id="mwr-fA-FY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="133.5832083958021"/>
+        </scene>
+        <!--Simple-->
+        <scene sceneID="0qt-Px-rfG">
+            <objects>
+                <viewController title="Simple with iPhone" id="FYM-Ec-Y0D" userLabel="Simple" customClass="SimpleViewController" customModule="evomoExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHh-H0-Eci" customClass="Sim">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igz-A8-xHU">
+                                <rect key="frame" x="16" y="80" width="343" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Complex with scan"/>
+                                <connections>
+                                    <action selector="startStopAction:" destination="FYM-Ec-Y0D" eventType="touchUpInside" id="SDk-DC-vHv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="200" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-sT-TM0">
+                                <rect key="frame" x="16" y="140" width="343" height="511"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="igz-A8-xHU" firstAttribute="leading" secondItem="66i-pw-IwO" secondAttribute="leading" constant="16" id="0zN-4a-MLr"/>
+                            <constraint firstItem="igz-A8-xHU" firstAttribute="top" secondItem="66i-pw-IwO" secondAttribute="top" constant="16" id="1B8-BF-iFd"/>
+                            <constraint firstItem="igz-A8-xHU" firstAttribute="leading" secondItem="cuV-sT-TM0" secondAttribute="leading" id="BKD-Ug-IFf"/>
+                            <constraint firstItem="igz-A8-xHU" firstAttribute="width" secondItem="cuV-sT-TM0" secondAttribute="width" id="atX-Oy-5aT"/>
+                            <constraint firstItem="cuV-sT-TM0" firstAttribute="top" secondItem="igz-A8-xHU" secondAttribute="bottom" constant="16" id="bha-p3-KTr"/>
+                            <constraint firstItem="66i-pw-IwO" firstAttribute="trailing" secondItem="cuV-sT-TM0" secondAttribute="trailing" constant="16" id="f2k-ba-d9t"/>
+                            <constraint firstItem="66i-pw-IwO" firstAttribute="trailing" secondItem="igz-A8-xHU" secondAttribute="trailing" constant="16" id="mhZ-KN-HE2"/>
+                            <constraint firstItem="66i-pw-IwO" firstAttribute="bottom" secondItem="cuV-sT-TM0" secondAttribute="bottom" constant="16" id="u27-bm-jFF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="66i-pw-IwO"/>
+                    </view>
+                    <connections>
+                        <outlet property="movementsLabel" destination="cuV-sT-TM0" id="7kM-mB-bck"/>
+                        <outlet property="startStopButton" destination="igz-A8-xHU" id="Ah8-t5-dHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNZ-u6-yYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474.4000000000001" y="821.73913043478262"/>
+        </scene>
+        <!--Device Scan-->
+        <scene sceneID="AGT-2f-XoO">
+            <objects>
+                <tableViewController id="sls-L5-8gn" customClass="ScanForMovesenseViewController" customModule="evomoExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6JZ-Cc-1ig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="deviceCell" textLabel="wAf-ev-77z" style="IBUITableViewCellStyleDefault" id="vte-l3-qWT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vte-l3-qWT" id="RVm-Td-Z3i">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAf-ev-77z">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sls-L5-8gn" id="12G-5A-aKw"/>
+                            <outlet property="delegate" destination="sls-L5-8gn" id="FE1-Q0-ZK3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Device Scan" id="czO-BC-jxo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qB-RD-9lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="133.5832083958021"/>
+        </scene>
+        <!--Evomo Demo App-->
+        <scene sceneID="SWE-xX-FlE">
+            <objects>
+                <viewController id="vBT-kv-AJb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVE-f4-eSO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_200 × 200" translatesAutoresizingMaskIntoConstraints="NO" id="Xnl-d3-9YI">
+                                <rect key="frame" x="122.5" y="88" width="130" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xnl-d3-9YI" secondAttribute="height" multiplier="141:128" id="6Uk-L2-yf6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="WUU-X4-Rk8">
+                                <rect key="frame" x="16" y="225" width="343" height="217"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-QR-Rvm">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="90.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title="Simple with iPhone sensor">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="FYM-Ec-Y0D" kind="show" id="qnn-kA-Ce7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCx-rM-FZe">
+                                        <rect key="frame" x="0.0" y="126.5" width="343" height="90.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Complex with scan function">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="MW2-7W-o01"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WUU-X4-Rk8" firstAttribute="leading" secondItem="hoM-ue-tDh" secondAttribute="leading" constant="16" id="3Dm-hw-Yjg"/>
+                            <constraint firstItem="Xnl-d3-9YI" firstAttribute="top" secondItem="hoM-ue-tDh" secondAttribute="top" constant="24" id="5nT-7I-cUq"/>
+                            <constraint firstItem="TCx-rM-FZe" firstAttribute="height" secondItem="hoM-ue-tDh" secondAttribute="height" multiplier="0.15" id="FCi-V4-QaC"/>
+                            <constraint firstItem="hoM-ue-tDh" firstAttribute="trailing" secondItem="WUU-X4-Rk8" secondAttribute="trailing" constant="16" id="KTy-nt-NL0"/>
+                            <constraint firstItem="8ff-QR-Rvm" firstAttribute="top" secondItem="Xnl-d3-9YI" secondAttribute="bottom" constant="19" id="ZjK-tv-3LI"/>
+                            <constraint firstItem="8ff-QR-Rvm" firstAttribute="height" secondItem="hoM-ue-tDh" secondAttribute="height" multiplier="0.15" id="p1P-Cc-Z8U"/>
+                            <constraint firstItem="Xnl-d3-9YI" firstAttribute="centerX" secondItem="hoM-ue-tDh" secondAttribute="centerX" id="w5a-qz-7YK"/>
+                            <constraint firstItem="WUU-X4-Rk8" firstAttribute="centerY" secondItem="xVE-f4-eSO" secondAttribute="centerY" id="yZ2-zd-rtp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hoM-ue-tDh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Evomo Demo App" id="ZJd-Sd-Jpp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQ7-Xm-3jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415.19999999999999" y="439.43028485757122"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IOd-xv-3ZW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xAv-dL-b4E" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3uj-Am-FBU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vBT-kv-AJb" kind="relationship" relationship="rootViewController" id="3db-lg-T2h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJw-YF-V7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="441"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo_200 × 200" width="200" height="200"/>
+    </resources>
+</document>

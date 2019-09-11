@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033702325AC06007359E1 /* DeviceScanViewController.swift */; };
+		31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */; };
+		31A033752326BEFA007359E1 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033742326BEFA007359E1 /* SimpleViewController.swift */; };
+		31C39B7C2227F4E200067873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C39B7B2227F4E200067873 /* AppDelegate.swift */; };
+		31C39B7E2227F4E200067873 /* ComplexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C39B7D2227F4E200067873 /* ComplexViewController.swift */; };
+		31C39B812227F4E200067873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B7F2227F4E200067873 /* Main.storyboard */; };
+		31C39B832227F4E400067873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B822227F4E400067873 /* Assets.xcassets */; };
+		31C39B862227F4E400067873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B842227F4E400067873 /* LaunchScreen.storyboard */; };
+		31C39C682229AE4400067873 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 31C39C672229AE4400067873 /* Podfile */; };
+		EFF460EAD282B43CDF6A20D0 /* Pods_evomoExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284F7F0181293129928755C0 /* Pods_evomoExampleApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31B85D27225934EF00F9B6F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		284F7F0181293129928755C0 /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31A033702325AC06007359E1 /* DeviceScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanViewController.swift; sourceTree = "<group>"; };
+		31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanMovesenseOnlyVC.swift; sourceTree = "<group>"; };
+		31A033742326BEFA007359E1 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		31C39B782227F4E200067873 /* evomoExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evomoExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C39B7B2227F4E200067873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31C39B7D2227F4E200067873 /* ComplexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexViewController.swift; sourceTree = "<group>"; };
+		31C39B802227F4E200067873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31C39B822227F4E400067873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31C39B852227F4E400067873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31C39B872227F4E400067873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C39C672229AE4400067873 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3C8D3E8E68E7EE45FB33289A /* Pods-evomoExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EC5F89759FEBAFD21DB0AF6D /* Pods-evomoExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31C39B752227F4E200067873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF460EAD282B43CDF6A20D0 /* Pods_evomoExampleApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31A033762326C5A1007359E1 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				31A033742326BEFA007359E1 /* SimpleViewController.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		31A033772326C5B0007359E1 /* Complex */ = {
+			isa = PBXGroup;
+			children = (
+				31C39B7D2227F4E200067873 /* ComplexViewController.swift */,
+				31A033702325AC06007359E1 /* DeviceScanViewController.swift */,
+				31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */,
+			);
+			path = Complex;
+			sourceTree = "<group>";
+		};
+		31C39B6F2227F4E200067873 = {
+			isa = PBXGroup;
+			children = (
+				31C39C672229AE4400067873 /* Podfile */,
+				31C39B7A2227F4E200067873 /* evomoExampleApp */,
+				31C39B792227F4E200067873 /* Products */,
+				5CE16698AAA1999808CB2E00 /* Pods */,
+				FE34E2748EB3E3B65F5C3FED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		31C39B792227F4E200067873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31C39B782227F4E200067873 /* evomoExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31C39B7A2227F4E200067873 /* evomoExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				31A033772326C5B0007359E1 /* Complex */,
+				31A033762326C5A1007359E1 /* Simple */,
+				31C39B7B2227F4E200067873 /* AppDelegate.swift */,
+				31C39B7F2227F4E200067873 /* Main.storyboard */,
+				31C39B822227F4E400067873 /* Assets.xcassets */,
+				31C39B842227F4E400067873 /* LaunchScreen.storyboard */,
+				31C39B872227F4E400067873 /* Info.plist */,
+			);
+			path = evomoExampleApp;
+			sourceTree = "<group>";
+		};
+		5CE16698AAA1999808CB2E00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D3E8E68E7EE45FB33289A /* Pods-evomoExampleApp.debug.xcconfig */,
+				EC5F89759FEBAFD21DB0AF6D /* Pods-evomoExampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE34E2748EB3E3B65F5C3FED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				284F7F0181293129928755C0 /* Pods_evomoExampleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31C39B772227F4E200067873 /* evomoExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C39B8A2227F4E400067873 /* Build configuration list for PBXNativeTarget "evomoExampleApp" */;
+			buildPhases = (
+				4D5084A5B5907A5B68725AA4 /* [CP] Check Pods Manifest.lock */,
+				31C39B742227F4E200067873 /* Sources */,
+				31C39B752227F4E200067873 /* Frameworks */,
+				31C39B762227F4E200067873 /* Resources */,
+				31B85D27225934EF00F9B6F2 /* Embed Frameworks */,
+				1413FDF3F56E07639DAC5D6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = evomoExampleApp;
+			productName = sdkTest;
+			productReference = 31C39B782227F4E200067873 /* evomoExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31C39B702227F4E200067873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Evomo UG";
+				TargetAttributes = {
+					31C39B772227F4E200067873 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 31C39B732227F4E200067873 /* Build configuration list for PBXProject "evomoExampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31C39B6F2227F4E200067873;
+			productRefGroup = 31C39B792227F4E200067873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31C39B772227F4E200067873 /* evomoExampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31C39B762227F4E200067873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C39B862227F4E400067873 /* LaunchScreen.storyboard in Resources */,
+				31C39B832227F4E400067873 /* Assets.xcassets in Resources */,
+				31C39C682229AE4400067873 /* Podfile in Resources */,
+				31C39B812227F4E200067873 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1413FDF3F56E07639DAC5D6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D5084A5B5907A5B68725AA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evomoExampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31C39B742227F4E200067873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A033752326BEFA007359E1 /* SimpleViewController.swift in Sources */,
+				31C39B7E2227F4E200067873 /* ComplexViewController.swift in Sources */,
+				31C39B7C2227F4E200067873 /* AppDelegate.swift in Sources */,
+				31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */,
+				31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		31C39B7F2227F4E200067873 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31C39B802227F4E200067873 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31C39B842227F4E400067873 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31C39B852227F4E400067873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31C39B882227F4E400067873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		31C39B892227F4E400067873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31C39B8B2227F4E400067873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C8D3E8E68E7EE45FB33289A /* Pods-evomoExampleApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = evomoExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.evomoExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31C39B8C2227F4E400067873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5F89759FEBAFD21DB0AF6D /* Pods-evomoExampleApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = evomoExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.evomoExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31C39B732227F4E200067873 /* Build configuration list for PBXProject "evomoExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C39B882227F4E400067873 /* Debug */,
+				31C39B892227F4E400067873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C39B8A2227F4E400067873 /* Build configuration list for PBXNativeTarget "evomoExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C39B8B2227F4E400067873 /* Debug */,
+				31C39B8C2227F4E400067873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31C39B702227F4E200067873 /* Project object */;
+}
