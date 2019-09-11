@@ -1,5 +1,5 @@
-# exampleApp
-Documentation and example app X-Code project to show the usage of the Evomo MotionAI SDK.
+# Doku Evomo MotionAI SDK + exampleApp
+Documentation and repo for the example app X-Code project to show the usage of the Evomo MotionAI SDK.
 
 ## TheEvomo MotionAI SDK
 ### Functionality
