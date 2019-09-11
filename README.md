@@ -200,7 +200,6 @@ ClassificationControlLayer.shared.heartRateSubHandler = { hr in
 ### Start and stop movement classification
 
 ```swift
-<<<<<<< HEAD
 
 // Start movement classification
 ClassificationControlLayer.shared.start(
@@ -294,103 +293,5 @@ typealias DevicePositionOrientation = (DevicePosition, DeviceOrientation, String
 	// (classified device positon, 
 	// classified device orientation,
 	// json string with collected statstic data)
-
-=======
-
-// Start movement classification
-ClassificationControlLayer.shared.start(
-	lookingForMovementType: nil,
-	isConnected: {
-		// Do something if connected successful
-	}, connectingFailed: { error in
-
-		// Do something if connecting failed
-	})
-
-// Stop movement classification
-_ = ClassificationControlLayer.shared.stop()
-```
-
-### Start device position classification while running
-```swift
-// Start classification of device position and orientation with timeout
-ClassificationControlLayer.shared.startPositionClassificationWithTimeout(
-	timeoutSeconds: 5,
-	isConnected: {
-		// Do something if connected successful
-		}
-	}, connectingFailed: { error in
-		// Do something if connecting failed
-		}
-}).done { stats in
-	// Do something with the stats
-}
-```
-Note: If you start movement classification before device position classification timeout ends → automatic stopping of device position classification and return unknown position and unknown orientation
-
-## Output Types
-
-### Device
-```swift
-enum DeviceType: String {
-    case iPhone = "iPhone"
-    case movesense = "Movesense"
-    case appleWatch = "Apple Watch"
-    case artificial = "Artificial"
-}
-
-enum DevicePosition: String {
-	case unknown = "Unknown"
-	case leftWrist = "Left Wrist"
-	case rightWrist = "Right Wrist"
-	case leftThigh = "Left Thigh"
-	case rightThigh = "Right Thigh"
-	case belly = "Belly"
-	case head = "Head"
-	case neck = "Neck"
-	case leftShoulder = "Left Shoulder"
-	case rightShoulder = "Right Shoulder"
-	case leftUpperArm = "Left Upper Arm"
-	case rightUpperArm = "Right Upper Arm"
-	case leftHand = "Left Hand"
-	case rightHand = "Right Hand"
-	case chest = "Chest"
-	case leftFoot = "Left Foot"
-	case rightFoot = "Right Foot"
-}
-
-enum DeviceOrientation: String {
-	case unknown = "Unknown"
-	case crownLeft = "CrownLeft"
-	case crownRight = "CrownRight"
-	case buttonUp = "ButtonUp"
-	case buttonDown = "ButtonDown"
-	case buttonRight = "ButtonRight"
-	case buttonLeft = "ButtonLeft"
-}
-```
-
-### Movement (Output)
-```swift
-public struct MovementOutput {
-	
-	// Label of the movement type
-	public let label: String
-	// Start timestamp of the movement
-	public let start: Date
-	// End timestamp of the movement
-	public let end: Date
-}
-```
-
-### Stats (Output)
-```swift
-typealias DevicePositionOrientation = (DevicePosition, DeviceOrientation, String)
-	// (classified device positon, 
-	// classified device orientation,
-	// json string with collected statstic data)
-
->>>>>>> f2abf43eca3773ee04c5dcd65071a4a23455a82b
 ```
 ![](/Documentation/Media/StartScreen.PNG)
-
