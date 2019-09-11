@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316E7EF323296B37001A1BDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 316E7EF223296B36001A1BDB /* README.md */; };
 		31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033702325AC06007359E1 /* DeviceScanViewController.swift */; };
 		31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */; };
 		31A033752326BEFA007359E1 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033742326BEFA007359E1 /* SimpleViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		284F7F0181293129928755C0 /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		316E7EF223296B36001A1BDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31A033702325AC06007359E1 /* DeviceScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanViewController.swift; sourceTree = "<group>"; };
 		31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanMovesenseOnlyVC.swift; sourceTree = "<group>"; };
 		31A033742326BEFA007359E1 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		31C39B6F2227F4E200067873 = {
 			isa = PBXGroup;
 			children = (
+				316E7EF223296B36001A1BDB /* README.md */,
 				31C39C672229AE4400067873 /* Podfile */,
 				31C39B7A2227F4E200067873 /* evomoExampleApp */,
 				31C39B792227F4E200067873 /* Products */,
@@ -197,6 +200,7 @@
 			files = (
 				31C39B862227F4E400067873 /* LaunchScreen.storyboard in Resources */,
 				31C39B832227F4E400067873 /* Assets.xcassets in Resources */,
+				316E7EF323296B37001A1BDB /* README.md in Resources */,
 				31C39C682229AE4400067873 /* Podfile in Resources */,
 				31C39B812227F4E200067873 /* Main.storyboard in Resources */,
 			);
