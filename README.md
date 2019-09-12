@@ -328,7 +328,7 @@ self.movesense.setHandlers(
                 print("BLE state changed: \(state)")
         })
 ```
-Check the example App for a better understanding of the 
+Check the example App for a better understanding of the scan process.
 
 ### Type - MovesenseDevice
 ````swift
