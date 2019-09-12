@@ -29,7 +29,7 @@ target 'evomoExampleApp' do
    pod "SwiftSpinner"
 end
 
-#
+# post install to add movesense libmds.a library to project.
 post_install do |installer|
   
   lib_name = "libmds.a"

@@ -155,14 +155,15 @@ class ScanForMovesenseViewController: UITableViewController {
         self.refreshControl!.tintColor = UIColor.white
         self.refreshControl!.addTarget(self, action: #selector(self.startScan), for: .valueChanged)
         
-        self.movesense.setHandlers(deviceConnected: { _ in
-            self.tableView.reloadData()
+        self.movesense.setHandlers(
+            deviceConnected: { _ in
+                self.tableView.reloadData()
         },
-                                   deviceDisconnected: { _ in
-                                    self.tableView.reloadData()
+            deviceDisconnected: { _ in
+                self.tableView.reloadData()
         },
-                                   bleOnOff: { (state) in
-                                    self.updateBleStatus(bleOnOff: state)
+            bleOnOff: { (state) in
+                self.updateBleStatus(bleOnOff: state)
         })
         
     }

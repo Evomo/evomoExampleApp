@@ -294,4 +294,46 @@ typealias DevicePositionOrientation = (DevicePosition, DeviceOrientation, String
 	// classified device orientation,
 	// json string with collected statstic data)
 ```
-![](/Documentation/Media/StartScreen.PNG)
+
+## Scan for movesense ble device
+```swift
+
+// start scan
+firstly {
+	when(resolved: self.movesense.startScan({ _ in
+		
+		// if new device found
+		// fetch and display devices
+		let bleDevices = self.movesense.getDevices().map { $0.serial }
+		
+	}.done {_ in
+		// if scan done
+	}
+
+// handle scan events
+self.movesense.setHandlers(
+            deviceConnected: { deviceSerial in
+                print("Device connected: \(deviceSerial)")
+        },
+            deviceDisconnected: { deviceSerial in
+                print("Device disconnected: \(deviceSerial)")
+        },
+            bleOnOff: { (state) in
+                print("BLE state changed: \(state)")
+        })
+```
+Check the example App for a better understanding of the 
+
+### Type - MovesenseDevice
+````swift
+
+public struct MovesenseDevice {
+    public var uuid: UUID
+    public var localName: String
+    public var serial: String // Must be unique among all devices
+    public var bleStatus: Bool
+    public var mdsConnected: Bool = false
+    public var deviceInfo: MovesenseDeviceInfo?
+}
+````
+Most relevant ist only the serial of the MovesenseDevice.
