@@ -11,7 +11,6 @@ import EVORecording
 import PromiseKit
 import EVOFoundation
 
-
 protocol ScanForMovesenseViewControllerDelegate : NSObjectProtocol{
     func setDevice(device: Device)
 }
@@ -34,7 +33,6 @@ class ScanForMovesenseViewController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
     
     private func updateBleStatus(bleOnOff: Bool) {
         self.bleOnOff = bleOnOff
