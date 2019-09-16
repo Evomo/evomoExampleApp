@@ -43,46 +43,23 @@ target 'YourTarget' do
   
   platform :ios, '12.1'
   use_frameworks!
-  pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '6.0.1'
-  pod "EVORecording/Binary", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.0.2'
-  pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.0.0'
-  pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.0.0'
+  pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '6.1.2'
+  pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
+  pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.0.5'
+  pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.1.5'
 
-end
-
-# post install to add movesense libmds.a library to project.
-post_install do |installer|
-  
-  lib_name = "libmds.a"
-  lib_path = "Movesense/IOS/Movesense/Release-iphoneos"
-  
-  # get ref of lib file
-  path = File.dirname(__FILE__) + "/Pods/" + lib_path + "/" + lib_name
-  movesense_ref = installer.pods_project.reference_for_path(path)
-  
-  installer.pods_project.targets.each do |target|
-    # find the right target
-    if target.name == 'EVORecording'
-      # add libmds.a file to build files
-      build_phase = target.frameworks_build_phase
-      build_phase.add_file_reference(movesense_ref)
-      
-      target.build_configurations.each do |config|
-        # add library search paths
-        config.build_settings['LIBRARY_SEARCH_PATHS'] = ["$(inherited)", "$(PROJECT_DIR)/" + lib_path]
-        
-      end
-    end
-  end
 end
 ```
 Note: logical operators or optimistic operators don't work for the tag in this case. So the tag must be manual incremented on version changes. 
 
 ### iPhone only usage
-The post install is not needed if do not need the movesense as device.
-Also replace the pod line:
+Replace the pod line:
 ```ruby
-pod "EVORecording/Binary", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.0.2'
+pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
+```
+with 
+```ruby
+pod "EVORecording/Binary", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
 ```
 
 ## General Access API - sample app
