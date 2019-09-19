@@ -54,12 +54,20 @@ Note: logical operators or optimistic operators don't work for the tag in this c
 
 ### iPhone only usage
 Replace the pod line:
+
 ```ruby
 pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
 ```
 with 
 ```ruby
 pod "EVORecording/Binary", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
+```
+### AppStore requirements
+Add following entries to iOS Info.plist:
+```
+NSBluetoothAlwaysUsageDescription : "We use Bluetooth to communicate with extern motion sensors to make motion detection possible." (This is a example)
+
+Privacy - Bluetooth Peripheral Usage Description : "This app requires Bluetooth to connect to an external motion sensor." (This is a example)
 ```
 
 ## General Access API - sample app
