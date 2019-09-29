@@ -22,13 +22,10 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
     @IBOutlet weak var heartRateLabel: UITextField!
     
     var iMovement: Int = 0
-    var device: Device?
+    var devices: [Device] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set classification model
-        ClassificationControlLayer.shared.classificationModel = .belly
 
         // Handle subscription of the classified movements
         ClassificationControlLayer.shared.movementHandler = { movement in
@@ -52,15 +49,14 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         movementsLabel.numberOfLines = 0
         movementsLabel.text = ""
         movementsLabel.layer.borderWidth = 2
-        movementsLabel.layer.borderColor = UIColor.groupTableViewBackground.cgColor
+        movementsLabel.layer.borderColor = UIColor.systemGroupedBackground.cgColor
 
     }
     
     // MARK: Device scan
     // Set scaned device via delegation
     func setDevice(device: Device) {
-        ClassificationControlLayer.shared.device = device
-        self.device = device
+        self.devices = [device]
         deviceType.text = device.deviceType.rawValue
         deviceID.text = device.deviceID
     }
@@ -92,6 +88,7 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         // Start movement classification
         
         ClassificationControlLayer.shared.start(
+            devices: self.devices,
             lookingForMovementType: nil,
             isConnected: {
                 // Hide Spinner if device is connected
@@ -125,6 +122,7 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         SwiftSpinner.show("Connecting ...")
         
         ClassificationControlLayer.shared.startPositionClassificationWithTimeout(
+            device: self.devices[0],
             timeoutSeconds: 5,
             isConnected: {
                 // Hide Spinner if device is connected

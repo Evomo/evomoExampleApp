@@ -104,7 +104,7 @@ class ScanForMovesenseViewController: UITableViewController {
                             devicePosition: .belly, deviceOrientation: .buttonRight)
         } else {
             // movesense
-            var indexPath = self.tableView.indexPathForSelectedRow!
+            let indexPath = self.tableView.indexPathForSelectedRow!
             let bleDeviceID = self.bleDevices[indexPath.row]
             
             if ["Pull down to start scanning", "Enable BLE"].contains(bleDeviceID) {

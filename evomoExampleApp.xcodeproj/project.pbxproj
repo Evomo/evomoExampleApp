@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10F72AE8A4C8B9B84E78FF49 /* Pods_evomoExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3333794FBA0B48CF6F9C5B73 /* Pods_evomoExampleApp.framework */; };
 		316E7EF323296B37001A1BDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 316E7EF223296B36001A1BDB /* README.md */; };
 		31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033702325AC06007359E1 /* DeviceScanViewController.swift */; };
 		31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */; };
@@ -18,6 +17,7 @@
 		31C39B832227F4E400067873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B822227F4E400067873 /* Assets.xcassets */; };
 		31C39B862227F4E400067873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B842227F4E400067873 /* LaunchScreen.storyboard */; };
 		31C39C682229AE4400067873 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 31C39C672229AE4400067873 /* Podfile */; };
+		F75850D50A88B12EE35C8ED4 /* Pods_evomoExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB2898AF238EABA04BB996A /* Pods_evomoExampleApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,9 +46,9 @@
 		31C39B852227F4E400067873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C39B872227F4E400067873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C39C672229AE4400067873 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3333794FBA0B48CF6F9C5B73 /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F448ADA4AF27D213BECC99 /* Pods-evomoExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		CBA2260357A75CA523EF5D8C /* Pods-evomoExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4AB2898AF238EABA04BB996A /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D371BFCF1CF88CCC98EDAE /* Pods-evomoExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EA497021334FA063381188E8 /* Pods-evomoExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F72AE8A4C8B9B84E78FF49 /* Pods_evomoExampleApp.framework in Frameworks */,
+				F75850D50A88B12EE35C8ED4 /* Pods_evomoExampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 				31C39B7A2227F4E200067873 /* evomoExampleApp */,
 				31C39B792227F4E200067873 /* Products */,
 				5CE16698AAA1999808CB2E00 /* Pods */,
-				F3ADAF7BA14790E7945D00D6 /* Frameworks */,
+				C608EDCE7EFDE725D62D01D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,16 +118,16 @@
 		5CE16698AAA1999808CB2E00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBA2260357A75CA523EF5D8C /* Pods-evomoExampleApp.debug.xcconfig */,
-				38F448ADA4AF27D213BECC99 /* Pods-evomoExampleApp.release.xcconfig */,
+				71D371BFCF1CF88CCC98EDAE /* Pods-evomoExampleApp.debug.xcconfig */,
+				EA497021334FA063381188E8 /* Pods-evomoExampleApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F3ADAF7BA14790E7945D00D6 /* Frameworks */ = {
+		C608EDCE7EFDE725D62D01D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3333794FBA0B48CF6F9C5B73 /* Pods_evomoExampleApp.framework */,
+				4AB2898AF238EABA04BB996A /* Pods_evomoExampleApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,13 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C39B8A2227F4E400067873 /* Build configuration list for PBXNativeTarget "evomoExampleApp" */;
 			buildPhases = (
-				36703902FFAC283FDC874E8E /* [CP] Check Pods Manifest.lock */,
+				43532E75131B84E70706BD85 /* [CP] Check Pods Manifest.lock */,
 				31C39B742227F4E200067873 /* Sources */,
 				31C39B752227F4E200067873 /* Frameworks */,
 				31C39B762227F4E200067873 /* Resources */,
 				31B85D27225934EF00F9B6F2 /* Embed Frameworks */,
-				948A84783F35C5B3D0ECC4AD /* [CP] Embed Pods Frameworks */,
-				69F6C839299BFE27EA81B9B8 /* [CP] Copy Pods Resources */,
+				CEA4D8EEBB3ECD9CD3709BA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +209,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36703902FFAC283FDC874E8E /* [CP] Check Pods Manifest.lock */ = {
+		43532E75131B84E70706BD85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,24 +231,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69F6C839299BFE27EA81B9B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		948A84783F35C5B3D0ECC4AD /* [CP] Embed Pods Frameworks */ = {
+		CEA4D8EEBB3ECD9CD3709BA4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,7 +407,7 @@
 		};
 		31C39B8B2227F4E400067873 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBA2260357A75CA523EF5D8C /* Pods-evomoExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 71D371BFCF1CF88CCC98EDAE /* Pods-evomoExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -437,7 +419,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = evomoExampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +434,7 @@
 		};
 		31C39B8C2227F4E400067873 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F448ADA4AF27D213BECC99 /* Pods-evomoExampleApp.release.xcconfig */;
+			baseConfigurationReference = EA497021334FA063381188E8 /* Pods-evomoExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -464,7 +446,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = evomoExampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

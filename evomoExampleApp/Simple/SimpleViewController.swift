@@ -19,22 +19,24 @@ class SimpleViewController: UIViewController {
     
     var iMovement: Int = 0
     var started: Bool = false
-    
+    var devices: [Device] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ClassificationControlLayer.shared.classificationModel = .belly
-        
         #if targetEnvironment(simulator)
-        ClassificationControlLayer.shared.device = Device(deviceID: WorkoutFile.jumpingJacks.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
-            deviceType: .artificial,
-            devicePosition: .belly, // <- do not change for artificial
-            deviceOrientation: .buttonRight)// <- do not change for artificial
+        devices = [Device(deviceID: WorkoutFile.jumpingJacks.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
+                    deviceType: .artificial,
+                    devicePosition: .belly, // <- do not change for artificial
+                    deviceOrientation: .buttonRight),
+                   Device(deviceID: WorkoutFile.squats.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
+                    deviceType: .artificial,
+                    devicePosition: .belly, // <- do not change for artificial
+                    deviceOrientation: .buttonRight)
+        ]// <- do not change for artificial
         
         #else
-        ClassificationControlLayer.shared.device = Device(deviceID: "", deviceType: .iPhone, devicePosition: .belly, deviceOrientation: .buttonRight)
-        
+        device = Device(deviceID: "", deviceType: .iPhone, devicePosition: .belly, deviceOrientation: .buttonRight)
         #endif
         
         // Handle heart rate changes
@@ -54,7 +56,7 @@ class SimpleViewController: UIViewController {
         movementsLabel.text = ""
         
         movementsLabel.layer.borderWidth = 2
-        movementsLabel.layer.borderColor = UIColor.groupTableViewBackground.cgColor
+        movementsLabel.layer.borderColor = UIColor.systemGroupedBackground.cgColor
         
         startStopButton.setTitle("Start Classification" , for: .normal)
     }
@@ -78,6 +80,7 @@ class SimpleViewController: UIViewController {
                 
                 // Start movement classification
                 ClassificationControlLayer.shared.start(
+                    devices: self.devices,
                     lookingForMovementType: nil,
                     isConnected: {
                         self.addLabelLine("Connected")
