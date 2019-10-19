@@ -11,10 +11,10 @@ target 'evomoExampleApp' do
   use_frameworks!
   
   # Pods for evomoExampleApp
-#  pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '6.1.2'
-#  pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.22'
-#  pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.0.5'
-#  pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.1.5'
+  pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '6.2.3'
+  pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.1.25'
+  pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.1.4'
+  pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.2.2'
 
   # Pods used for internal development
 #  pod "EVOFoundation/Source", '~>6.0.0'
@@ -22,10 +22,10 @@ target 'evomoExampleApp' do
 #  pod "EVOClassificationKit/Source", '~>6.0.0'
 #  pod "EVOControlLayer/Source", '~>6.0.0'
 
-   pod "EVOFoundation/Source", :path => '~/evomo/swift/frameworks/emfoundation/'
-   pod "EVORecording/Movesense", :path => '~/evomo/swift/frameworks/evorecording/'
-   pod "EVOClassificationKit", :path => '~/evomo/swift/frameworks/evoclassificationframework/'
-   pod "EVOControlLayer/Movesense", :path => '~/evomo/swift/frameworks/EVOControlLayer/'
+#   pod "EVOFoundation/Source", :path => '~/evomo/swift/frameworks/emfoundation/'
+#   pod "EVORecording/Movesense", :path => '~/evomo/swift/frameworks/evorecording/'
+#   pod "EVOClassificationKit", :path => '~/evomo/swift/frameworks/evoclassificationframework/'
+#   pod "EVOControlLayer/Movesense", :path => '~/evomo/swift/frameworks/EVOControlLayer/'
 
    pod "SwiftSpinner"
 end
@@ -62,8 +62,8 @@ post_install do |installer|
     if target.name == 'EVORecording'
       print("Add movesense libmds.a to project!")
       # add libmds.a file to build files
-      build_phase = target.frameworks_build_phase
-      build_phase.add_file_reference(movesense_ref)
+#      build_phases = target.frameworks_build_phases
+#      build_phase.add_file_reference(movesense_ref)
       
       target.build_configurations.each do |config|
         # add library search paths

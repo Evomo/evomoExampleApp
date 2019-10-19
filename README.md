@@ -67,7 +67,7 @@ Add following entries to iOS Info.plist:
 ```
 NSBluetoothAlwaysUsageDescription : "We use Bluetooth to communicate with extern motion sensors to make motion detection possible." (This is a example)
 
-Privacy - Bluetooth Peripheral Usage Description : "This app requires Bluetooth to connect to an external motion sensor." (This is a example)
+NSBluetoothPeripheralUsageDescription : "This app requires Bluetooth to connect to an external motion sensor." (This is a example)
 ```
 
 ## General Access API - sample app

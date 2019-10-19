@@ -37,7 +37,7 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         }
         
         // Handle subscription of the heart rate changes
-        ClassificationControlLayer.shared.heartRateSubHandler = { heartRate in
+        ClassificationControlLayer.shared.heartRateSubHandler = { (heartRate, _) in
             // Will be executed every time the heart rate value changes
            
             DispatchQueue.main.async {
@@ -48,8 +48,9 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         // Styling
         movementsLabel.numberOfLines = 0
         movementsLabel.text = ""
+        
         movementsLabel.layer.borderWidth = 2
-        movementsLabel.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        movementsLabel.layer.borderColor = UIColor.secondaryLabel.cgColor
 
     }
     

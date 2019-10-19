@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		316E7EF323296B37001A1BDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 316E7EF223296B36001A1BDB /* README.md */; };
 		31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033702325AC06007359E1 /* DeviceScanViewController.swift */; };
-		31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */; };
 		31A033752326BEFA007359E1 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033742326BEFA007359E1 /* SimpleViewController.swift */; };
 		31C39B7C2227F4E200067873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C39B7B2227F4E200067873 /* AppDelegate.swift */; };
 		31C39B7E2227F4E200067873 /* ComplexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C39B7D2227F4E200067873 /* ComplexViewController.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		316E7EF223296B36001A1BDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31A033702325AC06007359E1 /* DeviceScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanViewController.swift; sourceTree = "<group>"; };
-		31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanMovesenseOnlyVC.swift; sourceTree = "<group>"; };
 		31A033742326BEFA007359E1 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		31C39B782227F4E200067873 /* evomoExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evomoExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C39B7B2227F4E200067873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 			children = (
 				31C39B7D2227F4E200067873 /* ComplexViewController.swift */,
 				31A033702325AC06007359E1 /* DeviceScanViewController.swift */,
-				31A0337223267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift */,
 			);
 			path = Complex;
 			sourceTree = "<group>";
@@ -145,6 +142,7 @@
 				31C39B762227F4E200067873 /* Resources */,
 				31B85D27225934EF00F9B6F2 /* Embed Frameworks */,
 				CEA4D8EEBB3ECD9CD3709BA4 /* [CP] Embed Pods Frameworks */,
+				0AFEBD052C2089FC621EF890 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +207,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0AFEBD052C2089FC621EF890 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		43532E75131B84E70706BD85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,7 +274,6 @@
 				31C39B7E2227F4E200067873 /* ComplexViewController.swift in Sources */,
 				31C39B7C2227F4E200067873 /* AppDelegate.swift in Sources */,
 				31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */,
-				31A0337323267DA0007359E1 /* DeviceScanMovesenseOnlyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

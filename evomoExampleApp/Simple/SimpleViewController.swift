@@ -36,11 +36,11 @@ class SimpleViewController: UIViewController {
         ]// <- do not change for artificial
         
         #else
-        device = Device(deviceID: "", deviceType: .iPhone, devicePosition: .belly, deviceOrientation: .buttonRight)
+        devices = [Device(deviceID: "", deviceType: .iPhone, devicePosition: .belly, deviceOrientation: .buttonRight)]
         #endif
         
         // Handle heart rate changes
-        ClassificationControlLayer.shared.heartRateSubHandler = { hr in
+        ClassificationControlLayer.shared.heartRateSubHandler = { (hr, _) in
             print("New HeartRate: \(hr)")
         }
         
@@ -56,7 +56,7 @@ class SimpleViewController: UIViewController {
         movementsLabel.text = ""
         
         movementsLabel.layer.borderWidth = 2
-        movementsLabel.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        movementsLabel.layer.borderColor = UIColor.secondaryLabel.cgColor
         
         startStopButton.setTitle("Start Classification" , for: .normal)
     }

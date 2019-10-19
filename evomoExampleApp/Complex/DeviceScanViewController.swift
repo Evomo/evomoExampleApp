@@ -131,7 +131,8 @@ class ScanForMovesenseViewController: UITableViewController {
             self.bleDevices = []
             
             firstly {
-                when(resolved: self.movesense.startScan({ _ in
+                when(resolved: self.movesense.startScan({ (device, seal)  in
+                    // TODO: Add NearFieldConnection
                     // device found
                     self.bleDevices = self.movesense.getDevices().map { $0.serial }
                     self.tableView.reloadData() }))
