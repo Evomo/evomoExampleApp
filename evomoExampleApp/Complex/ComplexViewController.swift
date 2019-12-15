@@ -26,13 +26,16 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Add licenseID string once
+        ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
+        
         // Handle subscription of the classified movements
         ClassificationControlLayer.shared.movementHandler = { movement in
             // Will be executed every time a movement was classified
             self.iMovement += 1
             DispatchQueue.main.async {
-                self.addLabelLine("\(self.iMovement). \(movement.label)")
+                self.addLabelLine("\(self.iMovement). \(movement.typeLabel)")
             }
         }
         
@@ -45,12 +48,40 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
             }
         }
         
+        // Handle device events
+        ClassificationControlLayer.shared.deviceEventHandler = { deviceEvent in
+            let (device, event) = deviceEvent
+            
+            switch event {
+            case let .dataStraming(state):
+                // Will be triggered on data streaming state change (Bool)
+                // dataStraming = true if sensor data received in the last 0.2 seconds
+                
+                self.addLabelLine("\(device.deviceType): \(state ? "data streaming" : "data stream lost")")
+                
+            case let .connected(connected):
+                // Will be triggered if the device successfully connect or disconnect
+                
+                self.addLabelLine("\(device.deviceType): \(connected ? "connected" : "disconnected")")
+                
+            case let .energyPercent(energyPercent):
+                // Implemented for movesense devices (Apple devices dont return a energy level)
+                // The energy level will always emit on after connecting to the device.
+                self.addLabelLine("\(device.deviceType): EnergyLevel \(energyPercent * 100) %")
+                
+            case let .softwareVersion(version):
+                // not implemented now
+                // Will return the software version of the device after connecting
+                self.addLabelLine("\(device.deviceType): OS - \(version)")
+            }
+        }
+        
         // Styling
         movementsLabel.numberOfLines = 0
         movementsLabel.text = ""
         
         movementsLabel.layer.borderWidth = 2
-        movementsLabel.layer.borderColor = UIColor.secondaryLabel.cgColor
+        movementsLabel.layer.borderColor = UIColor.lightGray.cgColor
 
     }
     
@@ -85,18 +116,20 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
             SwiftSpinner.show("Connecting ...")
         }
         self.iMovement = 0
-
+        
         // Start movement classification
         
         ClassificationControlLayer.shared.start(
             devices: self.devices,
-            lookingForMovementType: nil,
             isConnected: {
-                // Hide Spinner if device is connected
-                DispatchQueue.main.async {
-                    SwiftSpinner.hide()
-                }
-        }, connectingFailed: { error in
+                self.addLabelLine("--- All devices connected ---")
+        }, isStarted:{
+            self.addLabelLine("--- All devices started ---")
+            // Hide Spinner if device is connected
+            DispatchQueue.main.async {
+                SwiftSpinner.hide()
+            }
+        }, isFailed: { error in
             
             // Failure Message by Spinner
             DispatchQueue.main.async {
@@ -115,46 +148,6 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         // Stop movement classification
         _ = ClassificationControlLayer.shared.stop()
     }
-    
-    @IBAction func classifyPosition(_ sender: UIButton) {
-        
-        self.movementsLabel.text = String("--- Classify Sensor Position ---")
-        // Show spinner
-        SwiftSpinner.show("Connecting ...")
-        
-        ClassificationControlLayer.shared.startPositionClassificationWithTimeout(
-            device: self.devices[0],
-            timeoutSeconds: 5,
-            isConnected: {
-                // Hide Spinner if device is connected
-                DispatchQueue.main.async {
-                    SwiftSpinner.hide()
-                }
-        }, connectingFailed: { error in
-            // Failure Message by Spinner
-            DispatchQueue.main.async {
-                SwiftSpinner.show("Error", animated: false)
-                    .addTapHandler({SwiftSpinner.hide()},
-                                   subtitle: self.parseErrorMessage(error))
-                
-            }
-        }).done { stats in
-            
-            self.addLabelLine("--- Classification finished! ---"
-                + "\nResults: "
-                + "\nPosition: \(stats.0)"
-                + "\nOrientation: \(stats.1)"
-                + "\n--- ---"
-                + "\n\(stats.2)"
-                + "\n--- ---", addAfter: true)
-            }.catch { error in
-                self.addLabelLine("--- Classification failed: \(error)")
-        }
-    
-        
-        
-    }
-    
     
     @IBAction func onClick(_ sender: UIButton) {
         self.view.endEditing(true)

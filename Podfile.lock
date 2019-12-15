@@ -1,53 +1,34 @@
 PODS:
-  - EVOClassificationKit (6.1.4):
-    - EVOClassificationKit/Source (= 6.1.4)
-    - EVOFoundation (~> 6.2)
+  - Alamofire (4.9.1)
+  - EVOClassificationKit (6.3.1):
+    - EVOClassificationKit/Source (= 6.3.1)
     - RxSwift (~> 5.0.0)
     - themis (~> 0.12.2)
-  - EVOClassificationKit/Binary (6.1.4):
-    - EVOFoundation (~> 6.2)
+  - EVOClassificationKit/Source (6.3.1):
+    - EVOFoundation/Source
     - RxSwift (~> 5.0.0)
     - themis (~> 0.12.2)
-  - EVOClassificationKit/Source (6.1.4):
-    - EVOFoundation (~> 6.2)
-    - RxSwift (~> 5.0.0)
-    - themis (~> 0.12.2)
-  - EVOControlLayer/Binary (6.2.2):
-    - EVOClassificationKit (~> 6.1.4)
-    - EVOFoundation (~> 6.2)
-  - EVOFoundation (6.2.3):
-    - EVOFoundation/Source (= 6.2.3)
+  - EVOControlLayer/Source (6.3.13):
+    - EVOClassificationKit
+    - EVOFoundation/Source
+    - EVORecording/Source
+  - EVOFoundation/Source (7.0.4):
+    - Alamofire (~> 4.0)
     - PromiseKit/CorePromise (~> 6.0)
     - PromiseKit/WatchConnectivity (~> 6.0)
-    - RelayKit (~> 0.2.1)
-  - EVOFoundation/Binary (6.2.3):
-    - PromiseKit/CorePromise (~> 6.0)
-    - PromiseKit/WatchConnectivity (~> 6.0)
-    - RelayKit (~> 0.2.1)
-  - EVOFoundation/Source (6.2.3):
-    - PromiseKit/CorePromise (~> 6.0)
-    - PromiseKit/WatchConnectivity (~> 6.0)
-    - RelayKit (~> 0.2.1)
-  - EVORecording/BinaryMovesense (6.1.25):
-    - EVOFoundation (~> 6.2)
-    - Movesense
-    - PromiseKit (~> 6.11)
     - SwiftyJSON (~> 5.0.0)
+  - EVORecording/Movesense (6.2.5):
+    - EVOFoundation/Source
+    - EVORecording/Source
+    - Movesense
+  - EVORecording/Source (6.2.5):
+    - EVOFoundation/Source
   - GRKOpenSSLFramework (1.0.2.18)
-  - Movesense (1.34.3)
-  - PromiseKit (6.11.0):
-    - PromiseKit/CorePromise (= 6.11.0)
-    - PromiseKit/Foundation (= 6.11.0)
-    - PromiseKit/UIKit (= 6.11.0)
-  - PromiseKit/CorePromise (6.11.0)
-  - PromiseKit/Foundation (6.11.0):
+  - Movesense (1.34.4)
+  - PromiseKit/CorePromise (6.12.0)
+  - PromiseKit/WatchConnectivity (6.12.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.11.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/WatchConnectivity (6.11.0):
-    - PromiseKit/CorePromise
-  - RelayKit (0.2.2)
-  - RxSwift (5.0.0)
+  - RxSwift (5.0.1)
   - SwiftSpinner (2.1.0)
   - SwiftyJSON (5.0.0)
   - themis (0.12.2):
@@ -63,19 +44,19 @@ PODS:
     - themis/themis-openssl/core
 
 DEPENDENCIES:
-  - "EVOClassificationKit/Binary (from `git@bitbucket.org:evomo/evoclassificationkitbinary.git`, tag `6.1.4`)"
-  - "EVOControlLayer/Binary (from `git@bitbucket.org:evomo/evocontrollayerbinary.git`, tag `6.2.2`)"
-  - "EVOFoundation/Binary (from `git@bitbucket.org:evomo/evofoundationbinary.git`, tag `6.2.3`)"
-  - "EVORecording/BinaryMovesense (from `git@bitbucket.org:evomo/evorecordingbinary.git`, tag `6.1.25`)"
+  - EVOClassificationKit (from `~/evomo/swift/frameworks/evoclassificationframework/`)
+  - EVOControlLayer/Source (from `~/evomo/swift/frameworks/EVOControlLayer/`)
+  - EVOFoundation/Source (from `~/evomo/swift/frameworks/emfoundation/`)
+  - EVORecording/Movesense (from `~/evomo/swift/frameworks/evorecording/`)
   - SwiftSpinner
 
 SPEC REPOS:
   "git@bitbucket.org:evomo/evomopods.git":
     - Movesense
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - GRKOpenSSLFramework
     - PromiseKit
-    - RelayKit
     - RxSwift
     - SwiftSpinner
     - SwiftyJSON
@@ -83,46 +64,28 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   EVOClassificationKit:
-    :git: "git@bitbucket.org:evomo/evoclassificationkitbinary.git"
-    :tag: 6.1.4
+    :path: "~/evomo/swift/frameworks/evoclassificationframework/"
   EVOControlLayer:
-    :git: "git@bitbucket.org:evomo/evocontrollayerbinary.git"
-    :tag: 6.2.2
+    :path: "~/evomo/swift/frameworks/EVOControlLayer/"
   EVOFoundation:
-    :git: "git@bitbucket.org:evomo/evofoundationbinary.git"
-    :tag: 6.2.3
+    :path: "~/evomo/swift/frameworks/emfoundation/"
   EVORecording:
-    :git: "git@bitbucket.org:evomo/evorecordingbinary.git"
-    :tag: 6.1.25
-
-CHECKOUT OPTIONS:
-  EVOClassificationKit:
-    :git: "git@bitbucket.org:evomo/evoclassificationkitbinary.git"
-    :tag: 6.1.4
-  EVOControlLayer:
-    :git: "git@bitbucket.org:evomo/evocontrollayerbinary.git"
-    :tag: 6.2.2
-  EVOFoundation:
-    :git: "git@bitbucket.org:evomo/evofoundationbinary.git"
-    :tag: 6.2.3
-  EVORecording:
-    :git: "git@bitbucket.org:evomo/evorecordingbinary.git"
-    :tag: 6.1.25
+    :path: "~/evomo/swift/frameworks/evorecording/"
 
 SPEC CHECKSUMS:
-  EVOClassificationKit: 8638831fd95bb1b4d2c31cf2eb24205f8beac16c
-  EVOControlLayer: 53ea674033a6dcb1f432192b8e2473806c21a5c0
-  EVOFoundation: 5575d699e8121aa0ef7ba7f461348418487b7dff
-  EVORecording: beaf3428295a888429f195fa707e1103c5199aaa
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  EVOClassificationKit: f907560b72863092db5087c64646ea7704f7c86f
+  EVOControlLayer: cdba3fbb9ceabbcccb17df77e46b58f028c74f66
+  EVOFoundation: f7c7593ab6723e19ddad7a23f7396c9a190ebd96
+  EVORecording: fc0a96ca4088f79ab20fe119e6e02a2d5187b808
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
-  Movesense: e04e0f56d6a11bbef152c3b784998385e22c143f
-  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
-  RelayKit: 7ad4a67643b8337eb06ad3565a769d3bc4d0fa2a
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
+  PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: e785b268f3b6432d7385767250dbc6d62507264b
+PODFILE CHECKSUM: b5ad7e2a1aa70659f0c144956607a4a4a082215f
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4

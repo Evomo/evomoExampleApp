@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>This App uses Bluetooth to communicate with extern motion sensors to make motion detection possible.</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>This App uses Bluetooth to communicate with extern motion sensors to make motion detection possible.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -19,11 +15,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
-	<string>12</string>
+	<string>14</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This App uses Bluetooth to communicate with extern motion sensors to make motion detection possible.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This App uses Bluetooth to communicate with extern motion sensors to make motion detection possible.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Wee need your Data (Update)</string>
 	<key>UILaunchStoryboardName</key>

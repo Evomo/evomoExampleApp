@@ -97,10 +97,12 @@ class ScanForMovesenseViewController: UITableViewController {
         if indexPath.section == 0 {
             // iphone
             device = Device(deviceID: UIDevice.current.name, deviceType: .iPhone,
-                            devicePosition: .belly, deviceOrientation: .buttonRight)
+                            isSimulated: false, devicePosition: .belly,
+                            deviceOrientation: .buttonRight)
         } else if indexPath.section == 1 {
             // artificial
-            device = Device(deviceID: artificialWorkouts[indexPath.row], deviceType: .artificial,
+            device = Device(deviceID: artificialWorkouts[indexPath.row],
+                            deviceType: .iPhone, isSimulated: true,
                             devicePosition: .belly, deviceOrientation: .buttonRight)
         } else {
             // movesense
@@ -111,7 +113,7 @@ class ScanForMovesenseViewController: UITableViewController {
                 return
             }
             
-            device = Device(deviceID: bleDeviceID, deviceType: .movesense,
+            device = Device(deviceID: bleDeviceID, deviceType: .movesense, isSimulated: false,
                             devicePosition: .belly, deviceOrientation: .buttonRight,
                             heartRate: true)
             
