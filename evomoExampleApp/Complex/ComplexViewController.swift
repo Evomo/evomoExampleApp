@@ -50,30 +50,9 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         
         // Handle device events
         ClassificationControlLayer.shared.deviceEventHandler = { deviceEvent in
-            let (device, event) = deviceEvent
             
-            switch event {
-            case let .dataStraming(state):
-                // Will be triggered on data streaming state change (Bool)
-                // dataStraming = true if sensor data received in the last 0.2 seconds
-                
-                self.addLabelLine("\(device.deviceType): \(state ? "data streaming" : "data stream lost")")
-                
-            case let .connected(connected):
-                // Will be triggered if the device successfully connect or disconnect
-                
-                self.addLabelLine("\(device.deviceType): \(connected ? "connected" : "disconnected")")
-                
-            case let .energyPercent(energyPercent):
-                // Implemented for movesense devices (Apple devices dont return a energy level)
-                // The energy level will always emit on after connecting to the device.
-                self.addLabelLine("\(device.deviceType): EnergyLevel \(energyPercent * 100) %")
-                
-            case let .softwareVersion(version):
-                // not implemented now
-                // Will return the software version of the device after connecting
-                self.addLabelLine("\(device.deviceType): OS - \(version)")
-            }
+            let deviceEventLogString = handleDeviceEvents(deviceEvent: deviceEvent)
+            self.addLabelLine(deviceEventLogString)
         }
         
         // Styling
@@ -113,7 +92,7 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
             self.addLabelLine("--- Start Classification ---")
             
             // Start connection spinner
-            SwiftSpinner.show("Connecting ...")
+            SwiftSpinner.show("1. Connecting ...")
         }
         self.iMovement = 0
         
@@ -122,12 +101,15 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         ClassificationControlLayer.shared.start(
             devices: self.devices,
             isConnected: {
+                DispatchQueue.main.async {
+                    SwiftSpinner.show("2. Starting ...")
+                }
                 self.addLabelLine("--- All devices connected ---")
         }, isStarted:{
             self.addLabelLine("--- All devices started ---")
             // Hide Spinner if device is connected
             DispatchQueue.main.async {
-                SwiftSpinner.hide()
+                SwiftSpinner.show(duration: 0.3, title: "Done")
             }
         }, isFailed: { error in
             

@@ -6,7 +6,7 @@ source 'git@bitbucket.org:evomo/evomopods.git'
 # Standard cocoapods specs source
 source 'https://github.com/CocoaPods/Specs.git'
 
-BINARY = false
+BINARY = true
 
 target 'evomoExampleApp' do
     platform :ios, '12.4'
@@ -14,10 +14,10 @@ target 'evomoExampleApp' do
     
     if BINARY == true
         # Pods for evomoExampleApp
-        pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '7.0.4'
-        pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.2.5'
+        pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '7.0.5'
+        pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.2.6'
         pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.3.1'
-        pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.3.13'
+        pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.4.0'
     else
         # Pods used for internal development
 #          pod "EVOFoundation/Source"

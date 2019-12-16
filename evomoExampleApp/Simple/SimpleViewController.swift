@@ -25,7 +25,7 @@ class SimpleViewController: UIViewController {
         super.viewDidLoad()
         
         #if targetEnvironment(simulator)
-        devices = [Device(deviceID: WorkoutFile.jumpingJacks.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
+        self.devices = [Device(deviceID: WorkoutFile.jumpingJacks.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
             deviceType: .iPhone,
             isSimulated: true,
             devicePosition: .belly, // <- do not change for artificial
@@ -38,7 +38,7 @@ class SimpleViewController: UIViewController {
         ]// <- do not change for artificial
         
         #else
-        devices = [Device(deviceID: "", deviceType: .iPhone, isSimulated: false, devicePosition: .belly, deviceOrientation: .buttonRight)]
+        self.devices = [Device(deviceID: "", deviceType: .iPhone, isSimulated: false, devicePosition: .belly, deviceOrientation: .buttonRight)]
         #endif
         
         // Declare licenseID string once (You will receive the license key from Evomo after agreeing to the license conditions.)
@@ -57,32 +57,12 @@ class SimpleViewController: UIViewController {
             self.addLabelLine(String("\(self.iMovement). \(movement.typeLabel)"))
         }
         
+
         // Handle device events
         ClassificationControlLayer.shared.deviceEventHandler = { deviceEvent in
-            let (device, event) = deviceEvent
             
-            switch event {
-            case let .dataStraming(state):
-                // Will be triggered on data streaming state change (Bool)
-                // dataStraming = true if sensor data received in the last 0.2 seconds
- 
-                self.addLabelLine("\(device.deviceType): \(state ? "data streaming" : "data stream lost")")
-                
-            case let .connected(connected):
-                // Will be triggered if the device successfully connect or disconnect
-                
-                self.addLabelLine("\(device.deviceType): \(connected ? "connected" : "disconnected")")
-                
-            case let .energyPercent(energyPercent):
-                // Implemented for movesense devices (Apple devices dont return a energy level)
-                // The energy level will always emit on after connecting to the device.
-                self.addLabelLine("\(device.deviceType): EnergyLevel \(energyPercent * 100) %")
-                
-            case let .softwareVersion(version):
-                // not implemented now
-                // Will return the software version of the device after connecting
-                self.addLabelLine("\(device.deviceType): OS - \(version)")
-            }
+            let deviceEventLogString = handleDeviceEvents(deviceEvent: deviceEvent)
+            self.addLabelLine(deviceEventLogString)
         }
         
         // Styleing
@@ -122,7 +102,7 @@ class SimpleViewController: UIViewController {
                     self.addLabelLine("--- All devices started ---")
                 }, isFailed: { error in
                     
-                    self.addLabelLine("Connection failed: \(error)")
+                    self.addLabelLine("Start classification failed: \(error)")
                     self.startStopButton.setTitle("Stop Classification" , for: .normal)
                     
                     self.started = false
