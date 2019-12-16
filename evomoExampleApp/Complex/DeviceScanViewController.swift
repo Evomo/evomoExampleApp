@@ -101,9 +101,10 @@ class ScanForMovesenseViewController: UITableViewController {
                             deviceOrientation: .buttonRight)
         } else if indexPath.section == 1 {
             // artificial
-            device = Device(deviceID: artificialWorkouts[indexPath.row],
+            device = Device(deviceID: "Simulated",
                             deviceType: .iPhone, isSimulated: true,
-                            devicePosition: .belly, deviceOrientation: .buttonRight)
+                            devicePosition: .belly, deviceOrientation: .buttonRight,
+                            details: artificialWorkouts[indexPath.row])
         } else {
             // movesense
             let indexPath = self.tableView.indexPathForSelectedRow!
