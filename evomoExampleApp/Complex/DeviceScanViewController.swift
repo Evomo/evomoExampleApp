@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import EVORecording
 import PromiseKit
-import EVOFoundation
+import EvomoMotionAI
 
 protocol ScanForMovesenseViewControllerDelegate : NSObjectProtocol{
     func setDevice(device: Device)
@@ -97,13 +96,14 @@ class ScanForMovesenseViewController: UITableViewController {
         if indexPath.section == 0 {
             // iphone
             device = Device(deviceID: UIDevice.current.name, deviceType: .iPhone,
-                            isSimulated: false, devicePosition: .belly,
+                            devicePosition: .belly,
                             deviceOrientation: .buttonRight)
         } else if indexPath.section == 1 {
             // artificial
             device = Device(deviceID: "Simulated",
-                            deviceType: .iPhone, isSimulated: true,
+                            deviceType: .iPhone,
                             devicePosition: .belly, deviceOrientation: .buttonRight,
+                            isSimulated: true,
                             details: artificialWorkouts[indexPath.row])
         } else {
             // movesense
@@ -114,7 +114,7 @@ class ScanForMovesenseViewController: UITableViewController {
                 return
             }
             
-            device = Device(deviceID: bleDeviceID, deviceType: .movesense, isSimulated: false,
+            device = Device(deviceID: bleDeviceID, deviceType: .movesense,
                             devicePosition: .belly, deviceOrientation: .buttonRight,
                             heartRate: true)
             

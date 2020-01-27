@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import EVOFoundation
-import EVOControlLayer
 import PromiseKit
-import EVORecording
 import SwiftSpinner
+import EvomoMotionAI
 
 class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDelegate {
     

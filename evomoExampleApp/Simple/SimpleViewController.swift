@@ -8,9 +8,7 @@
 
 import Foundation
 import UIKit
-import EVOControlLayer
-import EVOFoundation
-import EVORecording
+import EvomoMotionAI
 
 class SimpleViewController: UIViewController {
     
@@ -25,20 +23,17 @@ class SimpleViewController: UIViewController {
         super.viewDidLoad()
         
         #if targetEnvironment(simulator)
-        self.devices = [Device(deviceID: WorkoutFile.jumpingJacks.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
-            deviceType: .iPhone,
-            isSimulated: true,
-            devicePosition: .belly, // <- do not change for artificial
-            deviceOrientation: .buttonRight)
-            //            ,
-            //                   Device(deviceID: WorkoutFile.squats.rawValue, // options: .jumpingJacks, .squats, .sixerSets, .running
-            //                    deviceType: .artificial,
-            //                    devicePosition: .belly, // <- do not change for artificial
-            //                    deviceOrientation: .buttonRight)
-        ]// <- do not change for artificial
+        self.devices = [
+            Device(deviceID: "simulatedIphone",
+                   deviceType: .iPhone,
+                   devicePosition: .belly, // <- do not change for artificial
+                deviceOrientation: .buttonRight,
+                isSimulated: true,
+                details: WorkoutFile.jumpingJacks.rawValue) // options: .jumpingJacks, .squats, .sixerSets, .running
+        ]
         
         #else
-        self.devices = [Device(deviceID: "", deviceType: .iPhone, isSimulated: false, devicePosition: .belly, deviceOrientation: .buttonRight)]
+        self.devices = [Device(deviceID: "", deviceType: .iPhone, devicePosition: .belly, deviceOrientation: .buttonRight)]
         #endif
         
         // Declare licenseID string once (You will receive the license key from Evomo after agreeing to the license conditions.)

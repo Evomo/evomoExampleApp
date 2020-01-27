@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import EVOFoundation
+import EvomoMotionAI
 
 func handleDeviceEvents(deviceEvent: DeviceEvent) -> String {
     let (device, event) = deviceEvent
@@ -24,7 +24,7 @@ func handleDeviceEvents(deviceEvent: DeviceEvent) -> String {
     
     switch event {
     case let .dataStraming(state):
-        // Will be triggered on data streaming state change (Bool)
+        // Will be triggered on data streaming state change (Bloool)
         // dataStraming = true if sensor data received in the last 0.2 seconds
         
         logString = "\(deviceString): \(state ? "data streaming" : "data stream lost")"
@@ -43,6 +43,9 @@ func handleDeviceEvents(deviceEvent: DeviceEvent) -> String {
         // not implemented now
         // Will return the software version of the device after connecting
         logString = "\(deviceString): OS/FW - \(version)"
+
+    @unknown default:
+        logString = "unknown device event case"
     }
     return logString
 }

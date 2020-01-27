@@ -1,23 +1,27 @@
 PODS:
   - Alamofire (4.9.1)
-  - EVOClassificationKit/Binary (6.3.1):
-    - EVOFoundation/Binary
-    - RxSwift (~> 5.0.0)
-    - themis (~> 0.12.2)
-  - EVOControlLayer/Binary (6.4.0)
-  - EVOFoundation/Binary (7.0.5):
+  - EvomoMotionAI/Binary (1.0.14):
     - Alamofire (~> 4.0)
-    - PromiseKit/CorePromise (~> 6.0)
-    - PromiseKit/WatchConnectivity (~> 6.0)
-    - SwiftyJSON (~> 5.0.0)
-  - EVORecording/BinaryMovesense (6.2.6):
+    - MessagePack.swift (~> 3.0.0)
     - Movesense
+    - PromiseKit (~> 6.1)
+    - PromiseKit/WatchConnectivity (~> 6.1)
+    - SwiftyJSON (~> 5.0.0)
+    - themis (~> 0.12.2)
   - GRKOpenSSLFramework (1.0.2.18)
+  - MessagePack.swift (3.0.1)
   - Movesense (1.34.4)
-  - PromiseKit/CorePromise (6.12.0)
-  - PromiseKit/WatchConnectivity (6.12.0):
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
     - PromiseKit/CorePromise
-  - RxSwift (5.0.1)
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/WatchConnectivity (6.13.1):
+    - PromiseKit/CorePromise
   - SwiftSpinner (2.1.0)
   - SwiftyJSON (5.0.0)
   - themis (0.12.2):
@@ -33,10 +37,7 @@ PODS:
     - themis/themis-openssl/core
 
 DEPENDENCIES:
-  - "EVOClassificationKit/Binary (from `git@bitbucket.org:evomo/evoclassificationkitbinary.git`, tag `6.3.1`)"
-  - "EVOControlLayer/Binary (from `git@bitbucket.org:evomo/evocontrollayerbinary.git`, tag `6.4.0`)"
-  - "EVOFoundation/Binary (from `git@bitbucket.org:evomo/evofoundationbinary.git`, tag `7.0.5`)"
-  - "EVORecording/BinaryMovesense (from `git@bitbucket.org:evomo/evorecordingbinary.git`, tag `6.2.6`)"
+  - "EvomoMotionAI/Binary (from `git@bitbucket.org:evomo/evomomotionaibinary.git`, tag `1.0.14`)"
   - SwiftSpinner
 
 SPEC REPOS:
@@ -45,54 +46,33 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - GRKOpenSSLFramework
+    - MessagePack.swift
     - PromiseKit
-    - RxSwift
     - SwiftSpinner
     - SwiftyJSON
     - themis
 
 EXTERNAL SOURCES:
-  EVOClassificationKit:
-    :git: "git@bitbucket.org:evomo/evoclassificationkitbinary.git"
-    :tag: 6.3.1
-  EVOControlLayer:
-    :git: "git@bitbucket.org:evomo/evocontrollayerbinary.git"
-    :tag: 6.4.0
-  EVOFoundation:
-    :git: "git@bitbucket.org:evomo/evofoundationbinary.git"
-    :tag: 7.0.5
-  EVORecording:
-    :git: "git@bitbucket.org:evomo/evorecordingbinary.git"
-    :tag: 6.2.6
+  EvomoMotionAI:
+    :git: "git@bitbucket.org:evomo/evomomotionaibinary.git"
+    :tag: 1.0.14
 
 CHECKOUT OPTIONS:
-  EVOClassificationKit:
-    :git: "git@bitbucket.org:evomo/evoclassificationkitbinary.git"
-    :tag: 6.3.1
-  EVOControlLayer:
-    :git: "git@bitbucket.org:evomo/evocontrollayerbinary.git"
-    :tag: 6.4.0
-  EVOFoundation:
-    :git: "git@bitbucket.org:evomo/evofoundationbinary.git"
-    :tag: 7.0.5
-  EVORecording:
-    :git: "git@bitbucket.org:evomo/evorecordingbinary.git"
-    :tag: 6.2.6
+  EvomoMotionAI:
+    :git: "git@bitbucket.org:evomo/evomomotionaibinary.git"
+    :tag: 1.0.14
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EVOClassificationKit: 75d9589e929f94ca01f4f24e11b65f32bc4d1685
-  EVOControlLayer: 69fed91e75f22bd5e7e089c6e3ea423f97ac6f80
-  EVOFoundation: 28360a41e9ddb2064b788c15b61740fe1eac7601
-  EVORecording: b8a11454d9a931926573b04e820f2bc37eb3ede7
+  EvomoMotionAI: e16fc40090cebc6159294b7c3701072e15e10724
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
+  MessagePack.swift: 3c5eec2a66cf3c8236cb416abb5d1a8a1b52f5a6
   Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
-  PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: 4a76a1ecad354bf0cbf44b6e90e2f6554c54cee6
+PODFILE CHECKSUM: b77ba1328e026d05dfe2d5371dc208060b855e08
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0.beta.2

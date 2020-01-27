@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EVOControlLayer
+import EvomoMotionAI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
