@@ -10,7 +10,7 @@ target 'evomoExampleApp' do
     use_frameworks!
     
     # Pods for evomoExampleApp
-    pod "EvomoMotionAI"
+    pod "EvomoMotionAI/Movesense"
     
     pod "SwiftSpinner"
     

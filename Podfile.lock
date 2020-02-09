@@ -1,22 +1,16 @@
 PODS:
   - Alamofire (4.9.1)
-  - EvomoMotionAI (1.0.22):
-    - Alamofire (~> 4.0)
-    - EvomoMotionAI/Source (= 1.0.22)
-    - MessagePack.swift (~> 3.0.0)
-    - PromiseKit (~> 6.1)
-    - PromiseKit/WatchConnectivity (~> 6.1)
-    - SwiftyJSON (~> 5.0.0)
-    - themis (~> 0.12.2)
-  - EvomoMotionAI/Source (1.0.22):
+  - EvomoMotionAI/Movesense (1.0.25):
     - Alamofire (~> 4.0)
     - MessagePack.swift (~> 3.0.0)
+    - Movesense
     - PromiseKit (~> 6.1)
     - PromiseKit/WatchConnectivity (~> 6.1)
     - SwiftyJSON (~> 5.0.0)
     - themis (~> 0.12.2)
   - GRKOpenSSLFramework (1.0.2.18)
   - MessagePack.swift (3.0.1)
+  - Movesense (1.34.4)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -43,12 +37,13 @@ PODS:
     - themis/themis-openssl/core
 
 DEPENDENCIES:
-  - EvomoMotionAI
+  - EvomoMotionAI/Movesense
   - SwiftSpinner
 
 SPEC REPOS:
   https://bitbucket.org/evomo/evomopodsrelease:
     - EvomoMotionAI
+    - Movesense
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - GRKOpenSSLFramework
@@ -60,14 +55,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EvomoMotionAI: 92bbf096ec430ecbbe88abb26b191d19601ce3ae
+  EvomoMotionAI: a046f89909e29fd99f52f4916af2d2c55ab43f7a
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
   MessagePack.swift: 3c5eec2a66cf3c8236cb416abb5d1a8a1b52f5a6
+  Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: 5a121d842f9624d23abcd5f6da9861d75f0ca168
+PODFILE CHECKSUM: 8f25554e85e1846a89b5bc13b1f8693a270dc2fa
 
 COCOAPODS: 1.9.0.beta.3
