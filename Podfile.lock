@@ -1,16 +1,22 @@
 PODS:
   - Alamofire (4.9.1)
-  - EvomoMotionAI/Binary (1.0.14):
+  - EvomoMotionAI (1.0.22):
+    - Alamofire (~> 4.0)
+    - EvomoMotionAI/Source (= 1.0.22)
+    - MessagePack.swift (~> 3.0.0)
+    - PromiseKit (~> 6.1)
+    - PromiseKit/WatchConnectivity (~> 6.1)
+    - SwiftyJSON (~> 5.0.0)
+    - themis (~> 0.12.2)
+  - EvomoMotionAI/Source (1.0.22):
     - Alamofire (~> 4.0)
     - MessagePack.swift (~> 3.0.0)
-    - Movesense
     - PromiseKit (~> 6.1)
     - PromiseKit/WatchConnectivity (~> 6.1)
     - SwiftyJSON (~> 5.0.0)
     - themis (~> 0.12.2)
   - GRKOpenSSLFramework (1.0.2.18)
   - MessagePack.swift (3.0.1)
-  - Movesense (1.34.4)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -37,12 +43,12 @@ PODS:
     - themis/themis-openssl/core
 
 DEPENDENCIES:
-  - "EvomoMotionAI/Binary (from `git@bitbucket.org:evomo/evomomotionaibinary.git`, tag `1.0.14`)"
+  - EvomoMotionAI
   - SwiftSpinner
 
 SPEC REPOS:
-  "git@bitbucket.org:evomo/evomopods.git":
-    - Movesense
+  https://bitbucket.org/evomo/evomopodsrelease:
+    - EvomoMotionAI
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - GRKOpenSSLFramework
@@ -52,27 +58,16 @@ SPEC REPOS:
     - SwiftyJSON
     - themis
 
-EXTERNAL SOURCES:
-  EvomoMotionAI:
-    :git: "git@bitbucket.org:evomo/evomomotionaibinary.git"
-    :tag: 1.0.14
-
-CHECKOUT OPTIONS:
-  EvomoMotionAI:
-    :git: "git@bitbucket.org:evomo/evomomotionaibinary.git"
-    :tag: 1.0.14
-
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EvomoMotionAI: e16fc40090cebc6159294b7c3701072e15e10724
+  EvomoMotionAI: 92bbf096ec430ecbbe88abb26b191d19601ce3ae
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
   MessagePack.swift: 3c5eec2a66cf3c8236cb416abb5d1a8a1b52f5a6
-  Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: b77ba1328e026d05dfe2d5371dc208060b855e08
+PODFILE CHECKSUM: 5a121d842f9624d23abcd5f6da9861d75f0ca168
 
-COCOAPODS: 1.9.0.beta.2
+COCOAPODS: 1.9.0.beta.3

@@ -45,10 +45,6 @@ target 'YourTarget' do
   use_frameworks!
   
   # Pods for evomoExampleApp
-  pod "EVOFoundation/Binary", :git => 'git@bitbucket.org:evomo/evofoundationbinary.git', :tag => '7.0.5'
-  pod "EVORecording/BinaryMovesense", :git => 'git@bitbucket.org:evomo/evorecordingbinary.git', :tag => '6.2.6'
-  pod "EVOClassificationKit/Binary", :git => 'git@bitbucket.org:evomo/evoclassificationkitbinary.git', :tag => '6.3.1'
-  pod "EVOControlLayer/Binary",  :git => 'git@bitbucket.org:evomo/evocontrollayerbinary.git', :tag => '6.4.0'
 
 end
 ```
@@ -74,9 +70,7 @@ NSBluetoothPeripheralUsageDescription : "This app requires Bluetooth to connect 
 
 ## General Access API - sample app
 ```swift
-import EVOControlLayer
-import PromiseKit
-import EVOFoundation
+import EvomoMotionAI
 
 // Init the ClassificationControlLayer
 let controlLayer = ClassificationControlLayer.shared
@@ -87,7 +81,6 @@ ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
 // Define sensor device
 let devices = [Device(deviceID: "",
                       deviceType: .iPhone,
-                      isSimulated: false,
                       devicePosition: .leftUpperArm, 
                       deviceOrientation: .buttonDown)]
                              
@@ -149,9 +142,7 @@ _ = ClassificationControlLayer.shared.stop()
 
 ### Initialise the EVOControlLayer
 ```swift
-import EVOControlLayer
-import PromiseKit
-import EVOFoundation
+import EvomoMotionAI
 
 // Init the ClassificationControlLayer
 let controlLayer = ClassificationControlLayer.shared
@@ -160,7 +151,7 @@ let controlLayer = ClassificationControlLayer.shared
 ### Setup licenseID
 ```swift
 // Declare licenseID string once (You will receive the license key from Evomo after agreeing to the license conditions.)
-ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
+ClassificationControlLayer.shared.setLicense(licenseID: "licenseID-String")
 ```
 
 ### Setup the source device
@@ -168,7 +159,6 @@ ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
 // Define sensor device
 controlLayer.device = Device(deviceID: "", // Device ID 
                              deviceType: .iPhone, // Device type
-                             isSimulated: false, // will outomaticly set to true if xCode Simulator is used
                              devicePosition: .Belly, // Position of the smartphone
                              deviceOrientation: .buttonRight) 
 ```
@@ -176,16 +166,14 @@ controlLayer.device = Device(deviceID: "", // Device ID
 ```swift
 Device(deviceID: "", // id for iphone device not relevant
 	   deviceType: .iphone,
-	   devicePosition: .belly,
-	   deviceOrientation: .buttonRight)
+       ..)
 ```
 
 #### Movesense
 ```swift
 Device(deviceID: "175030001022", // Ident string (serial number) of the movesense sensor
 	   deviceType: .movesense,
-	   devicePosition: .chest, 
-	   deviceOrientation: .buttonRight)
+	   ..)
 ```
 
 #### Artificial/Simulator
@@ -198,7 +186,7 @@ Note: Wait about 5 seconds for the first movement after starting. The artificial
 
 Device(deviceID: ""
 	   deviceType: .iPhone,
-	   devicePosition: .belly, 
+	   devicePosition: .belly,  // Artificial device only works in belly position and buttonRight orientation
 	   deviceOrientation: .buttonRight,
        ...
        
@@ -215,11 +203,12 @@ enum WorkoutFile: String {
 
 ### Define the classification model
 ```swift
-// Define classification model
+// Expert/Experimental property: 
+// Define classification model (optional - default model for each devicePosition will be overwritten)
 let device = Device(deviceID: ""
        deviceType: .iPhone,
        ...
----->  classificationModel: .chest
+---->  classificationModel: .specific(1915)
        )
        
 // options: .belly, .leftUpperArm, .chest, specific(Int) <- Inset a testRun id to select a specific model
@@ -300,12 +289,12 @@ public struct Device {
 
     public var deviceID: String
     public let deviceType: DeviceType
-    public var isSimulated: Bool
     public let devicePosition: DevicePosition
     public let deviceOrientation: DeviceOrientation
-    public let deviceForward: Bool
+    public let deviceForward: Bool = true
     public let heartRate: Bool // if true -> record heartRate
     public var classificationModel: String // customize classification model
+    public var isSimulated: Bool = false
     public var details: String // set WorkoutFile.rawValue to select a file for simulation mode
 }
 
@@ -402,7 +391,7 @@ public struct MovesenseDevice {
     public var deviceInfo: MovesenseDeviceInfo?
 }
 ````
-Most relevant ist only the serial of the MovesenseDevice.
+Most relevant ist only the serial string of the MovesenseDevice.
 
 
 ## DevicePositionClassification - in development
