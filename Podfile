@@ -1,8 +1,7 @@
-# suppress the UUIDs warnings
-# install! 'cocoapods', :deterministic_uuids => false
 
-# Insert your own private specs repo source
+# Evomo private specs repo source
 source 'https://bitbucket.org/evomo/evomopodsrelease.git'
+
 # Standard cocoapods specs source
 source 'https://github.com/CocoaPods/Specs.git'
 
