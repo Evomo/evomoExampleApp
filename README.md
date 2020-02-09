@@ -23,7 +23,7 @@ Documentation and repo for the example app X-Code project to show the usage of t
 
 ## MotionAI Docu
 
-- (Evomo MotionAI SDK)[https://evomo.github.io/motionAI-docu/]
+- [Evomo MotionAI SDK](https://evomo.github.io/motionAI-docu/)
 - [Get Started](https://evomo.github.io/motionAI-docu/docs/getStarted)
 - [API Reference](https://evomo.github.io/motionAI-docu/docs/documentation)
 - [Evomo Company Website](https://www.evomo.de)
