@@ -9,6 +9,7 @@
 import UIKit
 import PromiseKit
 import EvomoMotionAI
+import Movesense
 
 protocol ScanForMovesenseViewControllerDelegate : NSObjectProtocol{
     func setDevice(device: Device)

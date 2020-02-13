@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - EvomoMotionAI/Movesense (1.0.25):
+  - EvomoMotionAI/Movesense (1.0.33):
     - Alamofire (~> 4.0)
     - MessagePack.swift (~> 3.0.0)
     - Movesense
@@ -55,7 +55,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EvomoMotionAI: a046f89909e29fd99f52f4916af2d2c55ab43f7a
+  EvomoMotionAI: d454626438f732d6b86f258d05294234df133717
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
   MessagePack.swift: 3c5eec2a66cf3c8236cb416abb5d1a8a1b52f5a6
   Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
@@ -64,6 +64,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: 8f25554e85e1846a89b5bc13b1f8693a270dc2fa
+PODFILE CHECKSUM: 4a84a46aea475d372220c19c40606ce37cb863db
 
 COCOAPODS: 1.9.0.beta.3

@@ -38,7 +38,7 @@ class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDel
         }
         
         // Handle subscription of the heart rate changes
-        ClassificationControlLayer.shared.heartRateSubHandler = { (heartRate, _) in
+        ClassificationControlLayer.shared.heartRateHandler = { (heartRate, _) in
             // Will be executed every time the heart rate value changes
            
             DispatchQueue.main.async {

@@ -40,7 +40,7 @@ class SimpleViewController: UIViewController {
         ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
         
         // Handle heart rate changes
-        ClassificationControlLayer.shared.heartRateSubHandler = { (hr, _) in
+        ClassificationControlLayer.shared.heartRateHandler = { (hr, _) in
             // Will not triggered on iPhone only (only for movesense devices)
             print("New HeartRate: \(hr)")
         }

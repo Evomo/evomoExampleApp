@@ -7,8 +7,8 @@ Documentation and repo for the example app X-Code project to show the usage of t
 <img src="/Documentation/Media/ComplexMode.PNG" alt="drawing" width="300"/>
 </p>
 
-- Simple mode to classify movementy with the iPhone sensors motion data
-- Complex mode with multiple sensor optiions like Movesense
+- **Simple mode** to classify movementy with the iPhone sensors motion data
+- **Complex mode** with multiple sensor optiions like Movesense
 
 ## TheEvomo MotionAI SDK
 ### Functionality
