@@ -15,7 +15,7 @@ Documentation and repo for the example app X-Code project to show the usage of t
 - Feed raw measurement date directly into the sdk and get classified movement back
 - API example in the ViewController.swift file
 
->!!! Troubleshooting !!! - ff evomoExampleApp was builed before, clear DerivedData folder and clean project before building ClassificationOnlyExample target.
+>!!! Troubleshooting !!! - If evomoExampleApp was builed before, clear DerivedData folder and clean project before building ClassificationOnlyExample target.
 
 ## TheEvomo MotionAI SDK
 ### Functionality
