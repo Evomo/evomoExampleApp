@@ -1,6 +1,13 @@
 PODS:
   - Alamofire (4.9.1)
-  - EvomoMotionAI/Movesense (1.0.33):
+  - EvomoMotionAI/ClassificationOnly (1.4.1):
+    - Alamofire (~> 4.0)
+    - MessagePack.swift (~> 3.0.0)
+    - PromiseKit (~> 6.1)
+    - PromiseKit/WatchConnectivity (~> 6.1)
+    - SwiftyJSON (~> 5.0.0)
+    - themis (~> 0.12.2)
+  - EvomoMotionAI/Movesense (1.4.1):
     - Alamofire (~> 4.0)
     - MessagePack.swift (~> 3.0.0)
     - Movesense
@@ -37,6 +44,7 @@ PODS:
     - themis/themis-openssl/core
 
 DEPENDENCIES:
+  - EvomoMotionAI/ClassificationOnly
   - EvomoMotionAI/Movesense
   - SwiftSpinner
 
@@ -55,15 +63,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  EvomoMotionAI: d454626438f732d6b86f258d05294234df133717
+  EvomoMotionAI: b00a722301566555db7aa0796f4d9314f4a57166
   GRKOpenSSLFramework: 1d65e55d569af7b23074373041a92cc8bc768a92
   MessagePack.swift: 3c5eec2a66cf3c8236cb416abb5d1a8a1b52f5a6
-  Movesense: 3da12f7ebe8d5c9091ed3800f8098f95051b72df
+  Movesense: fa71487963344506a226706ecef86bdcb85a4500
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   themis: f4ef6d942670146ad08dca8cc99a34ae040878c0
 
-PODFILE CHECKSUM: 4a84a46aea475d372220c19c40606ce37cb863db
+PODFILE CHECKSUM: 4e2fbb2674cef8cbca19ff7d6fddc6f43a6378a5
 
 COCOAPODS: 1.9.0.beta.3

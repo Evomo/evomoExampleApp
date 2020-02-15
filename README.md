@@ -1,7 +1,7 @@
 # Evomo exampleApp for the MotionAI SDK
 Documentation and repo for the example app X-Code project to show the usage of the Evomo MotionAI SDK.
 
-## The example App
+## The exampleApp
 <p float="left">
 <img src="/Documentation/Media/StartScreen.PNG" alt="drawing" width="300"/> 
 <img src="/Documentation/Media/ComplexMode.PNG" alt="drawing" width="300"/>
@@ -9,6 +9,11 @@ Documentation and repo for the example app X-Code project to show the usage of t
 
 - **Simple mode** to classify movementy with the iPhone sensors motion data
 - **Complex mode** with multiple sensor optiions like Movesense
+
+## The ClassificationOnlyExample
+- Classification only without direct sensor data enquiry
+- Feed raw measurement date directly into the sdk and get classified movement back
+- API example in the ViewController.swift file
 
 ## TheEvomo MotionAI SDK
 ### Functionality

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0414695C6749048219685691 /* Pods_ClassificationOnlyExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE688697296C9635ED046D83 /* Pods_ClassificationOnlyExample.framework */; };
 		311C029223A3D913000085D4 /* DevicePositionDetectionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C029123A3D913000085D4 /* DevicePositionDetectionExample.swift */; };
 		311EB8AA23A6C9A50005F4F1 /* HandleDeviceEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB8A923A6C9A50005F4F1 /* HandleDeviceEvents.swift */; };
 		31A033712325AC06007359E1 /* DeviceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A033702325AC06007359E1 /* DeviceScanViewController.swift */; };
@@ -16,9 +17,29 @@
 		31C39B812227F4E200067873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B7F2227F4E200067873 /* Main.storyboard */; };
 		31C39B832227F4E400067873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B822227F4E400067873 /* Assets.xcassets */; };
 		31C39B862227F4E400067873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C39B842227F4E400067873 /* LaunchScreen.storyboard */; };
+		31D62CC623F73026009D98EA /* evomoExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D62CC523F73026009D98EA /* evomoExampleAppTests.swift */; };
+		31D62CCD23F7310F009D98EA /* licenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF443A23A005AA006ED295 /* licenseData.swift */; };
 		31EF443B23A005AA006ED295 /* licenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF443A23A005AA006ED295 /* licenseData.swift */; };
-		61DADABB09D010A97CE177D3 /* Pods_evomoExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09B8778EC45864B06AAA90A /* Pods_evomoExampleApp.framework */; };
+		31F0687223F873980015448C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0687123F873980015448C /* AppDelegate.swift */; };
+		31F0687423F873980015448C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0687323F873980015448C /* SceneDelegate.swift */; };
+		31F0687623F873980015448C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0687523F873980015448C /* ViewController.swift */; };
+		31F0687923F873980015448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F0687723F873980015448C /* Main.storyboard */; };
+		31F0687B23F873990015448C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F0687A23F873990015448C /* Assets.xcassets */; };
+		31F0687E23F873990015448C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F0687C23F873990015448C /* LaunchScreen.storyboard */; };
+		31F0688323F882D70015448C /* licenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF443A23A005AA006ED295 /* licenseData.swift */; };
+		3A69DEFC7365368D87F70517 /* Pods_evomoExampleApp_evomoExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4710C384ED0CC5281657682E /* Pods_evomoExampleApp_evomoExampleAppTests.framework */; };
+		42DCC88E1499B8A46A8A476B /* Pods_evomoExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076A15BCC762EB42CF88D031 /* Pods_evomoExampleApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31D62CC823F73026009D98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31C39B702227F4E200067873 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31C39B772227F4E200067873;
+			remoteInfo = evomoExampleApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		31B85D27225934EF00F9B6F2 /* Embed Frameworks */ = {
@@ -34,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		076A15BCC762EB42CF88D031 /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		311C029123A3D913000085D4 /* DevicePositionDetectionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePositionDetectionExample.swift; sourceTree = "<group>"; };
 		311EB8A923A6C9A50005F4F1 /* HandleDeviceEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleDeviceEvents.swift; sourceTree = "<group>"; };
 		316E7EF223296B36001A1BDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -47,11 +69,27 @@
 		31C39B852227F4E400067873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C39B872227F4E400067873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C39C672229AE4400067873 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		31D62CC323F73026009D98EA /* evomoExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evomoExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31D62CC523F73026009D98EA /* evomoExampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evomoExampleAppTests.swift; sourceTree = "<group>"; };
+		31D62CC723F73026009D98EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E33A6A23835F46008A9957 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		31EF443A23A005AA006ED295 /* licenseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = licenseData.swift; sourceTree = "<group>"; };
-		717DD2F0483991D5C8D8AF7F /* Pods-evomoExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B09B8778EC45864B06AAA90A /* Pods_evomoExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB720B360A3D8A08EA46ED70 /* Pods-evomoExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		31F0686F23F873980015448C /* ClassificationOnlyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassificationOnlyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F0687123F873980015448C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31F0687323F873980015448C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		31F0687523F873980015448C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31F0687823F873980015448C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31F0687A23F873990015448C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31F0687D23F873990015448C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31F0687F23F873990015448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4710C384ED0CC5281657682E /* Pods_evomoExampleApp_evomoExampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evomoExampleApp_evomoExampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		539725FB62C900287AC98F1F /* Pods-ClassificationOnlyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassificationOnlyExample.debug.xcconfig"; path = "Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample.debug.xcconfig"; sourceTree = "<group>"; };
+		591D4F8D95F841B4F6457942 /* Pods-evomoExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		67DAC8EC157D3AB799A25140 /* Pods-evomoExampleApp-evomoExampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp-evomoExampleAppTests.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D0069652316779B8040D795 /* Pods-evomoExampleApp-evomoExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp-evomoExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6A5FBF99BA8D42733C4B97C /* Pods-ClassificationOnlyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassificationOnlyExample.release.xcconfig"; path = "Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample.release.xcconfig"; sourceTree = "<group>"; };
+		BEEE5A7B467FF7271CC95692 /* Pods-evomoExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evomoExampleApp.release.xcconfig"; path = "Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		EE688697296C9635ED046D83 /* Pods_ClassificationOnlyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClassificationOnlyExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,21 +97,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DADABB09D010A97CE177D3 /* Pods_evomoExampleApp.framework in Frameworks */,
+				42DCC88E1499B8A46A8A476B /* Pods_evomoExampleApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31D62CC023F73026009D98EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A69DEFC7365368D87F70517 /* Pods_evomoExampleApp_evomoExampleAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F0686C23F873980015448C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0414695C6749048219685691 /* Pods_ClassificationOnlyExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18DD586FE08E7CEAF454CD7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B09B8778EC45864B06AAA90A /* Pods_evomoExampleApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		311EB8A623A698010005F4F1 /* inDevelopment */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +161,11 @@
 				316E7EF223296B36001A1BDB /* README.md */,
 				31C39C672229AE4400067873 /* Podfile */,
 				31C39B7A2227F4E200067873 /* evomoExampleApp */,
+				31D62CC423F73026009D98EA /* evomoExampleAppTests */,
+				31F0687023F873980015448C /* ClassificationOnlyExample */,
 				31C39B792227F4E200067873 /* Products */,
 				5CE16698AAA1999808CB2E00 /* Pods */,
-				18DD586FE08E7CEAF454CD7A /* Frameworks */,
+				C796721686AFCCA39E375DDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				31C39B782227F4E200067873 /* evomoExampleApp.app */,
+				31D62CC323F73026009D98EA /* evomoExampleAppTests.xctest */,
+				31F0686F23F873980015448C /* ClassificationOnlyExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,13 +195,50 @@
 			path = evomoExampleApp;
 			sourceTree = "<group>";
 		};
+		31D62CC423F73026009D98EA /* evomoExampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				31D62CC523F73026009D98EA /* evomoExampleAppTests.swift */,
+				31D62CC723F73026009D98EA /* Info.plist */,
+			);
+			path = evomoExampleAppTests;
+			sourceTree = "<group>";
+		};
+		31F0687023F873980015448C /* ClassificationOnlyExample */ = {
+			isa = PBXGroup;
+			children = (
+				31F0687123F873980015448C /* AppDelegate.swift */,
+				31F0687323F873980015448C /* SceneDelegate.swift */,
+				31F0687523F873980015448C /* ViewController.swift */,
+				31F0687723F873980015448C /* Main.storyboard */,
+				31F0687A23F873990015448C /* Assets.xcassets */,
+				31F0687C23F873990015448C /* LaunchScreen.storyboard */,
+				31F0687F23F873990015448C /* Info.plist */,
+			);
+			path = ClassificationOnlyExample;
+			sourceTree = "<group>";
+		};
 		5CE16698AAA1999808CB2E00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				717DD2F0483991D5C8D8AF7F /* Pods-evomoExampleApp.debug.xcconfig */,
-				EB720B360A3D8A08EA46ED70 /* Pods-evomoExampleApp.release.xcconfig */,
+				591D4F8D95F841B4F6457942 /* Pods-evomoExampleApp.debug.xcconfig */,
+				BEEE5A7B467FF7271CC95692 /* Pods-evomoExampleApp.release.xcconfig */,
+				8D0069652316779B8040D795 /* Pods-evomoExampleApp-evomoExampleAppTests.debug.xcconfig */,
+				67DAC8EC157D3AB799A25140 /* Pods-evomoExampleApp-evomoExampleAppTests.release.xcconfig */,
+				539725FB62C900287AC98F1F /* Pods-ClassificationOnlyExample.debug.xcconfig */,
+				A6A5FBF99BA8D42733C4B97C /* Pods-ClassificationOnlyExample.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C796721686AFCCA39E375DDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				076A15BCC762EB42CF88D031 /* Pods_evomoExampleApp.framework */,
+				4710C384ED0CC5281657682E /* Pods_evomoExampleApp_evomoExampleAppTests.framework */,
+				EE688697296C9635ED046D83 /* Pods_ClassificationOnlyExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,13 +248,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C39B8A2227F4E400067873 /* Build configuration list for PBXNativeTarget "evomoExampleApp" */;
 			buildPhases = (
-				7138571F55A4EAE09984E44A /* [CP] Check Pods Manifest.lock */,
+				EFD7C4799146A636414671E1 /* [CP] Check Pods Manifest.lock */,
 				11D033811FE9D9EEBB81208F /* [CP] Prepare Artifacts */,
 				31C39B742227F4E200067873 /* Sources */,
 				31C39B752227F4E200067873 /* Frameworks */,
 				31C39B762227F4E200067873 /* Resources */,
 				31B85D27225934EF00F9B6F2 /* Embed Frameworks */,
-				52585EE76C4EE990E49529DD /* [CP] Embed Pods Frameworks */,
+				27D0297232596F7CA783A6BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +263,47 @@
 			name = evomoExampleApp;
 			productName = sdkTest;
 			productReference = 31C39B782227F4E200067873 /* evomoExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31D62CC223F73026009D98EA /* evomoExampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31D62CCC23F73026009D98EA /* Build configuration list for PBXNativeTarget "evomoExampleAppTests" */;
+			buildPhases = (
+				1FFB778D5F8E864786C1D32B /* [CP] Check Pods Manifest.lock */,
+				2BDDE2B77781A7A1FF056746 /* [CP] Prepare Artifacts */,
+				31D62CBF23F73026009D98EA /* Sources */,
+				31D62CC023F73026009D98EA /* Frameworks */,
+				31D62CC123F73026009D98EA /* Resources */,
+				DEF06AAE5145B165749BA1A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31D62CC923F73026009D98EA /* PBXTargetDependency */,
+			);
+			name = evomoExampleAppTests;
+			productName = evomoExampleAppTests;
+			productReference = 31D62CC323F73026009D98EA /* evomoExampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		31F0686E23F873980015448C /* ClassificationOnlyExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31F0688223F873990015448C /* Build configuration list for PBXNativeTarget "ClassificationOnlyExample" */;
+			buildPhases = (
+				CCBE3838CA11C10E826644B0 /* [CP] Check Pods Manifest.lock */,
+				0CD17866BA17A9169B25B86B /* [CP] Prepare Artifacts */,
+				31F0686B23F873980015448C /* Sources */,
+				31F0686C23F873980015448C /* Frameworks */,
+				31F0686D23F873980015448C /* Resources */,
+				6CF94F62BBAC281CC0C2DF69 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClassificationOnlyExample;
+			productName = ClassificationOnlyExample;
+			productReference = 31F0686F23F873980015448C /* ClassificationOnlyExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -197,6 +325,13 @@
 							};
 						};
 					};
+					31D62CC223F73026009D98EA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 31C39B772227F4E200067873;
+					};
+					31F0686E23F873980015448C = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 31C39B732227F4E200067873 /* Build configuration list for PBXProject "evomoExampleApp" */;
@@ -213,6 +348,8 @@
 			projectRoot = "";
 			targets = (
 				31C39B772227F4E200067873 /* evomoExampleApp */,
+				31D62CC223F73026009D98EA /* evomoExampleAppTests */,
+				31F0686E23F873980015448C /* ClassificationOnlyExample */,
 			);
 		};
 /* End PBXProject section */
@@ -228,9 +365,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31D62CC123F73026009D98EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F0686D23F873980015448C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F0687E23F873990015448C /* LaunchScreen.storyboard in Resources */,
+				31F0687B23F873990015448C /* Assets.xcassets in Resources */,
+				31F0687923F873980015448C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CD17866BA17A9169B25B86B /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		11D033811FE9D9EEBB81208F /* [CP] Prepare Artifacts */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,7 +419,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52585EE76C4EE990E49529DD /* [CP] Embed Pods Frameworks */ = {
+		1FFB778D5F8E864786C1D32B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evomoExampleApp-evomoExampleAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27D0297232596F7CA783A6BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,7 +458,80 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp/Pods-evomoExampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7138571F55A4EAE09984E44A /* [CP] Check Pods Manifest.lock */ = {
+		2BDDE2B77781A7A1FF056746 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CF94F62BBAC281CC0C2DF69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClassificationOnlyExample/Pods-ClassificationOnlyExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCBE3838CA11C10E826644B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClassificationOnlyExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF06AAE5145B165749BA1A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-evomoExampleApp-evomoExampleAppTests/Pods-evomoExampleApp-evomoExampleAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFD7C4799146A636414671E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,7 +570,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31D62CBF23F73026009D98EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31D62CC623F73026009D98EA /* evomoExampleAppTests.swift in Sources */,
+				31D62CCD23F7310F009D98EA /* licenseData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F0686B23F873980015448C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F0687623F873980015448C /* ViewController.swift in Sources */,
+				31F0688323F882D70015448C /* licenseData.swift in Sources */,
+				31F0687223F873980015448C /* AppDelegate.swift in Sources */,
+				31F0687423F873980015448C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31D62CC923F73026009D98EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31C39B772227F4E200067873 /* evomoExampleApp */;
+			targetProxy = 31D62CC823F73026009D98EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		31C39B7F2227F4E200067873 /* Main.storyboard */ = {
@@ -319,6 +613,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				31C39B852227F4E400067873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		31F0687723F873980015448C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31F0687823F873980015448C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31F0687C23F873990015448C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31F0687D23F873990015448C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -448,7 +758,7 @@
 		};
 		31C39B8B2227F4E400067873 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 717DD2F0483991D5C8D8AF7F /* Pods-evomoExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 591D4F8D95F841B4F6457942 /* Pods-evomoExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -481,7 +791,7 @@
 		};
 		31C39B8C2227F4E400067873 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB720B360A3D8A08EA46ED70 /* Pods-evomoExampleApp.release.xcconfig */;
+			baseConfigurationReference = BEEE5A7B467FF7271CC95692 /* Pods-evomoExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -512,6 +822,90 @@
 			};
 			name = Release;
 		};
+		31D62CCA23F73026009D98EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0069652316779B8040D795 /* Pods-evomoExampleApp-evomoExampleAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				INFOPLIST_FILE = evomoExampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.evomoExampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evomoExampleApp.app/evomoExampleApp";
+			};
+			name = Debug;
+		};
+		31D62CCB23F73026009D98EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DAC8EC157D3AB799A25140 /* Pods-evomoExampleApp-evomoExampleAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				INFOPLIST_FILE = evomoExampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.evomoExampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evomoExampleApp.app/evomoExampleApp";
+			};
+			name = Release;
+		};
+		31F0688023F873990015448C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539725FB62C900287AC98F1F /* Pods-ClassificationOnlyExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				INFOPLIST_FILE = ClassificationOnlyExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.ClassificationOnlyExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31F0688123F873990015448C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A5FBF99BA8D42733C4B97C /* Pods-ClassificationOnlyExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8298DX3KDW;
+				INFOPLIST_FILE = ClassificationOnlyExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = evomo.ClassificationOnlyExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,6 +923,24 @@
 			buildConfigurations = (
 				31C39B8B2227F4E400067873 /* Debug */,
 				31C39B8C2227F4E400067873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31D62CCC23F73026009D98EA /* Build configuration list for PBXNativeTarget "evomoExampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31D62CCA23F73026009D98EA /* Debug */,
+				31D62CCB23F73026009D98EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31F0688223F873990015448C /* Build configuration list for PBXNativeTarget "ClassificationOnlyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31F0688023F873990015448C /* Debug */,
+				31F0688123F873990015448C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

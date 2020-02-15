@@ -39,12 +39,6 @@ class SimpleViewController: UIViewController {
         // Declare licenseID string once (You will receive the license key from Evomo after agreeing to the license conditions.)
         ClassificationControlLayer.shared.setLicense(licenseID: licenseID)
         
-        // Handle heart rate changes
-        ClassificationControlLayer.shared.heartRateHandler = { (hr, _) in
-            // Will not triggered on iPhone only (only for movesense devices)
-            print("New HeartRate: \(hr)")
-        }
-        
         // Handle subscription of the classified movements
         ClassificationControlLayer.shared.movementHandler = { movement in
             // Will be executed every time a movement was classified

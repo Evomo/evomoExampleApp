@@ -37,6 +37,16 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "31D62CC223F73026009D98EA"
+               BuildableName = "evomoExampleAppTests.xctest"
+               BlueprintName = "evomoExampleAppTests"
+               ReferencedContainer = "container:evomoExampleApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

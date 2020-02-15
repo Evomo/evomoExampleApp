@@ -1,10 +1,10 @@
-
 # Evomo private specs repo source
 source 'https://bitbucket.org/evomo/evomopodsrelease.git'
 
 # Standard cocoapods specs source
 source 'https://github.com/CocoaPods/Specs.git'
 
+# exampleApp with Movesense sensor
 target 'evomoExampleApp' do
     platform :ios, '12.1'
     use_frameworks!
@@ -13,15 +13,19 @@ target 'evomoExampleApp' do
     pod "EvomoMotionAI/Movesense"
     pod "SwiftSpinner"
     
+    target 'evomoExampleAppTests' do
+      # Pods for testing
+    end
+    
 end
 
-#post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#
-#        # set bundle identifier platform specific (cocoapod bug: https://github.com/CocoaPods/CocoaPods/issues/9135 )
-#        target.build_configurations.each do |config|
-#            config.build_settings['PRODUCT_BUNDLE_IDENTIFIER'] = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}.${PLATFORM_NAME}"
-#        end
-#    end
-#end
-
+# exampleApp with classification only (feed data directly into SDK and get movement back)
+# !!! Troubleshooting: if evomoExampleApp was builed before, clear DerivedData folder and clean project before building this target
+target 'ClassificationOnlyExample' do
+    platform :ios, '12.1'
+    use_frameworks!
+    
+    # Pods for evomoExampleApp
+    pod "EvomoMotionAI/ClassificationOnly"
+    
+end
