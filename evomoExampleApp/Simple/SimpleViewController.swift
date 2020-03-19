@@ -95,6 +95,7 @@ class SimpleViewController: UIViewController {
                     self.startStopButton.setTitle("Stop Classification" , for: .normal)
                     
                     self.started = false
+                    self.startStopButton.setTitle("Start Classification" , for: .normal)
                 })
             }
             self.startStopButton.setTitle("Stop Classification" , for: .normal)

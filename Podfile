@@ -13,9 +13,15 @@ target 'evomoExampleApp' do
     pod "EvomoMotionAI/Movesense"
     pod "SwiftSpinner"
     
-    target 'evomoExampleAppTests' do
-      # Pods for testing
-    end
+end
+
+# exampleApp with Movesense sensor
+target 'iPhoneOnlyExample' do
+    platform :ios, '12.1'
+    use_frameworks!
+    
+    # Pods for evomoExampleApp
+    pod "EvomoMotionAI/Basic"
     
 end
 
@@ -29,3 +35,4 @@ target 'ClassificationOnlyExample' do
     pod "EvomoMotionAI/ClassificationOnly"
     
 end
+

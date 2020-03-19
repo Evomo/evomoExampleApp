@@ -15,6 +15,10 @@ Documentation and repo for the example app X-Code project to show the usage of t
 - Feed raw measurement date directly into the sdk and get classified movement back
 - API example in the ViewController.swift file
 
+## The iPhoneOnlyExample
+- Shows only how to install the basic pod
+- No app fuctionality implemented in this example
+
 ## TheEvomo MotionAI SDK
 ### Functionality
 - Classify movement in realtime
