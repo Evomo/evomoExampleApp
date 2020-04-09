@@ -22,7 +22,7 @@ class ScanForMovesenseViewController: UITableViewController {
     
     private var bleOnOff = false
     
-    let artificialWorkouts = WorkoutFile.describeAll()
+    let artificialWorkouts = ["hop_single_3x"]
     
     let sections = ["Mobile phone", "Artificial", "Movesense"]
     
