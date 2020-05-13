@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 import SwiftSpinner
-import EvomoMotionAI
+import EvomoMotionAIMovesense
 
 class ComplexViewController: UIViewController, ScanForMovesenseViewControllerDelegate {
     

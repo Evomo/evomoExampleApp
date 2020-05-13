@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import EvomoMotionAI
+import EvomoMotionAIMovesense
 
 class SimpleViewController: UIViewController {
     
@@ -76,6 +76,7 @@ class SimpleViewController: UIViewController {
             self.started = false
             
         } else {
+                        
             self.addLabelLine("--- Start Classification ---")
             self.iMovement = 0
             

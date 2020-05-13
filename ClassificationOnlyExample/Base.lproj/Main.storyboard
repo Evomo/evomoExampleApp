@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZp-rU-WV1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZp-rU-WV1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,46 +11,13 @@
         <!--Simple-->
         <scene sceneID="d80-cW-oPa">
             <objects>
-                <viewController title="Simple with iPhone" id="zZp-rU-WV1" userLabel="Simple" customClass="SimpleViewController" customModule="evomoExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Simple with iPhone" id="zZp-rU-WV1" userLabel="Simple" customClass="ViewController" customModule="ClassificationOnlyExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhj-Of-ON5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-4T-nX2">
-                                <rect key="frame" x="16" y="60" width="382" height="46"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="startStopAction:" destination="zZp-rU-WV1" eventType="touchUpInside" id="STq-mu-Yas"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="200" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeb-Ua-QVm">
-                                <rect key="frame" x="16" y="122" width="382" height="724"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="ogl-4T-nX2" firstAttribute="leading" secondItem="AIQ-45-Wd3" secondAttribute="leading" constant="16" id="37W-Ro-vYE"/>
-                            <constraint firstItem="zeb-Ua-QVm" firstAttribute="top" secondItem="ogl-4T-nX2" secondAttribute="bottom" constant="16" id="5lq-xo-CUf"/>
-                            <constraint firstItem="AIQ-45-Wd3" firstAttribute="bottom" secondItem="zeb-Ua-QVm" secondAttribute="bottom" constant="16" id="5yd-JE-APs"/>
-                            <constraint firstItem="AIQ-45-Wd3" firstAttribute="trailing" secondItem="ogl-4T-nX2" secondAttribute="trailing" constant="16" id="cY0-9t-17h"/>
-                            <constraint firstItem="ogl-4T-nX2" firstAttribute="leading" secondItem="zeb-Ua-QVm" secondAttribute="leading" id="eBy-yX-KFO"/>
-                            <constraint firstItem="AIQ-45-Wd3" firstAttribute="trailing" secondItem="zeb-Ua-QVm" secondAttribute="trailing" constant="16" id="kjJ-nA-ZXG"/>
-                            <constraint firstItem="ogl-4T-nX2" firstAttribute="width" secondItem="zeb-Ua-QVm" secondAttribute="width" id="mYe-dQ-TKI"/>
-                            <constraint firstItem="ogl-4T-nX2" firstAttribute="top" secondItem="AIQ-45-Wd3" secondAttribute="top" constant="16" id="svw-Jo-2x1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AIQ-45-Wd3"/>
                     </view>
-                    <connections>
-                        <outlet property="movementsLabel" destination="zeb-Ua-QVm" id="8tC-vt-c7f"/>
-                        <outlet property="startStopButton" destination="ogl-4T-nX2" id="0GO-3q-23u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5G-sf-FUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 
 import UIKit
 import PromiseKit
-import EvomoMotionAI
+import EvomoMotionAIMovesense
 import Movesense
 
 protocol ScanForMovesenseViewControllerDelegate : NSObjectProtocol{

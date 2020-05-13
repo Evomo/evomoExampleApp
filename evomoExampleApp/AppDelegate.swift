@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EvomoMotionAI
+import EvomoMotionAIMovesense
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EvomoMotionAI
+import EVOClassification
 import PromiseKit
 
 class ViewController: UIViewController {
@@ -20,14 +20,11 @@ class ViewController: UIViewController {
         // setup device - for classification only postion, orientation and forward is relevant
         let device = Device(deviceID: "", deviceType: .iPhone, devicePosition: .machineWeight, deviceOrientation: .buttonRight, deviceForward: true)
         
-        do {
-            // init class
-            if classification == nil {
-                classification = try Classification(device: device)
-            }
-        } catch {
-            print("Error: \(error.localizedDescription)")
+        // init class
+        if classification == nil {
+            classification = Classification(device: device, licenseID: licenseID)
         }
+        
         
         if let classificationInstance = classification {
             
@@ -38,7 +35,7 @@ class ViewController: UIViewController {
             
             firstly {
                 // start classification
-                classificationInstance.startClassification(licenseID: licenseID)
+                classificationInstance.startClassification()
             }.done { _ in
                 print("Classification started")
             }.catch { error in
@@ -47,12 +44,12 @@ class ViewController: UIViewController {
             
             // feed measurement points - single mp oder as array
             do {
-            try classificationInstance.add([(AccelerationData(x: 1, y: 2, z: 3),
-                                        RotationRateData(x: 1, y: 2, z: 3),
-                                        GravityData(x: 1, y: 2, z: 3),
-                                        UserAccelerationData(x: 1, y: 2, z: 3),
-                                        QuaternionData(x: 1, y: 2, z: 3, w: 4),
-                                        Date())], device: device)
+                try classificationInstance.add([(AccelerationData(x: 1, y: 2, z: 3),
+                                                 RotationRateData(x: 1, y: 2, z: 3),
+                                                 GravityData(x: 1, y: 2, z: 3),
+                                                 MagneticFieldData(x: 1, y: 2, z: 3),
+                                                 QuaternionData(x: 1, y: 2, z: 3, w: 4),
+                                                 Date())], device: device)
             } catch {
                 print("Error adding mps: \(error.localizedDescription)")
             }

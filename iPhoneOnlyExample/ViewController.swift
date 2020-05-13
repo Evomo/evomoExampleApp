@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         ClassificationControlLayer.shared.start(
             devices: [deviceIphone],
             licenseID: "4b3d051f-d4f5-46a6-a403-6f4a4b474dbd---",
+            isConnected: {print("Connected!")},
             isStarted: {print("Startead!")},
             isFailed: {error in print("\(error)")}
             )

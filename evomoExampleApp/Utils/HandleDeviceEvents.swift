@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import EvomoMotionAI
+import EvomoMotionAIMovesense
 
 func handleDeviceEvents(deviceEvent: DeviceEvent) -> String {
     let (device, event) = deviceEvent
