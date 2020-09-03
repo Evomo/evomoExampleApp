@@ -29,7 +29,7 @@ class SimpleViewController: UIViewController {
                    devicePosition: .belly, // <- do not change for artificial
                 deviceOrientation: .buttonRight,
                 isSimulated: true,
-                details: WorkoutFile.jumpingJacks.rawValue) // options: .jumpingJacks, .squats, .sixerSets, .running
+                details: "jumpingJack") // options: .jumpingJacks, .squats, .sixerSets, .running
         ]
         
         #else

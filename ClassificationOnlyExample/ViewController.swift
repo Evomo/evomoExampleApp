@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         if let classificationInstance = classification {
             
             // Handle subscripted classified movements
-            classificationInstance.subscribe(with: ObjectIdentifier(self)) { movement in
+            classificationInstance.subscribeMovements(with: ObjectIdentifier(self)) { movement in
                 print(movement!.typeLabel)
             }
             
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             }
             
             // unsubscripe at end of the workout
-            classificationInstance.unsubscribe(with: ObjectIdentifier(self))
+            classificationInstance.unsubscribeAll(with: ObjectIdentifier(self))
             
         }
         

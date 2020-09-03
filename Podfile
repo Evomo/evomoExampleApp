@@ -12,8 +12,10 @@ target 'evomoExampleApp' do
     # Pods for evomoExampleApp
     pod "EvomoMotionAI/Movesense"
     # pod "EvomoMotionAI/Movesense", :path => '~/evomo/swift/frameworks/evomomotionaiframework/'
-
+    
     pod "SwiftSpinner"
+    
+    target 'evomoExampleAppTests'
     
 end
 
@@ -25,7 +27,8 @@ target 'iPhoneOnlyExample' do
     # Pods for evomoExampleApp
     pod "EvomoMotionAI/Basic"
     # pod "EvomoMotionAI", :path => '~/evomo/swift/frameworks/evomomotionaiframework/'
-
+    
+    target 'iPhoneOnlyExampleTests'
 end
 
 ## exampleApp with classification only (feed data directly into SDK and get movement back)
@@ -36,7 +39,8 @@ target 'ClassificationOnlyExample' do
 
     # Pods for evomoExampleApp
     pod "EvomoMotionAI/ClassificationOnly"
-
+    
+    target 'ClassificationOnlyExampleTests'
 end
 #
 #post_install do |installer|
